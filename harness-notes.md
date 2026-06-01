@@ -208,15 +208,9 @@ Rule（底线） → Skill（标准化） → Scripts（硬验证）
 
 **主工作台 — 快速入门与状态条、SVN/路径与平台配置、更新与打开 Unity 等主操作、底部日志区：**
 
-![](https://ronzl.github.io/harness-reading-notes/images/img_01.png)
-
 **工程修复工具箱 — 按修复项展示风险等级，支持预检与执行修复：**
 
-![](https://ronzl.github.io/harness-reading-notes/images/img_02.png)
-
 **设置 — 可开启小白模式（隐藏高级功能），以及智能建议、悬停详细说明等选项：**
-
-![](https://ronzl.github.io/harness-reading-notes/images/img_03.png)
 
  一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：
 - 工程更新
@@ -227,6 +221,15 @@ Rule（底线） → Skill（标准化） → Scripts（硬验证）
 - 更新失败后的诊断与恢复
 - 多语言界面
 - 日志、遥测、状态反馈
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_01.png)
+*主工作台界面*
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_02.png)
+*工程修复工具箱*
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_03.png)
+*设置界面*
 
 **特征：** 功能持续迭代；既有 UI 又有服务和状态逻辑；既要工程正确性也要用户体验。**特别适合作为 Harness 的样本。**
 
@@ -337,6 +340,7 @@ SPEC、Rule、Skill 补完以后，系统比最早稳了很多。但当需求继
 不是模型不够聪明，而是**强迫它一次性扮演太多角色**。一个 Agent 如果既理解需求、又设计方案、又判断可行性、又写代码、又自己审自己——一定会出问题。
 
 ![](https://ronzl.github.io/harness-reading-notes/images/img_04.png)
+*单 Agent 承担过多角色的困境*
 
 ### 5.2 三种路线对比（核心决策章节）
 
@@ -586,8 +590,6 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 
 **实际运行时 PM Agent 调度各子 Agent 的 Cursor 长截屏：**
 
-![](https://ronzl.github.io/harness-reading-notes/images/img_06.png)
-
 ### 6-7章回顾：作者总结
 
 > 第五章到第七章连起来看，回答的是同一件事：
@@ -596,6 +598,9 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 > - 第七章：拆完以后系统怎么继续补稳
 
 > **Harness Engineering 在真实项目里的成长路径，根本不是先设计一套完美体系再照着执行，而是先用最小可用形态跑起来，然后在真实问题里不断补结构、补边界、补门禁、补反馈闭环。**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_06.png)
+*PM Agent 调度各子 Agent 的 Cursor 运行截屏*
 
 ---
 
@@ -681,6 +686,8 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 **dev-map（开发导航地图）：**
 
 ![](https://ronzl.github.io/harness-reading-notes/images/img_07.png)
+*开发导航文档示例*
+
 
 
 - 规则：**改代码之前先查 dev-map**
@@ -691,6 +698,8 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 **任务看板：**
 
 ![](https://ronzl.github.io/harness-reading-notes/images/img_08.png)
+*任务看板示例*
+
 
 
 - 维护者：PM
@@ -774,6 +783,7 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 ### 四块拼图
 
 ![](https://ronzl.github.io/harness-reading-notes/images/img_09.png)
+*Harness 四块拼图示意图*
 
 | 拼图 | 对应章节 | 管什么 |
 |:---:|:-------:|:------:|
