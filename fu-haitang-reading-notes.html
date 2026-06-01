@@ -39,7 +39,6 @@
   header .meta { margin-top: 18px; font-size: 0.82em; opacity: 0.55; }
 
   article { padding: 36px 0 60px; }
-  article h1 { font-size: 1.65em; margin: 1.6em 0 0.5em; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--text); }
   article h2 { font-size: 1.3em; margin: 1.5em 0 0.5em; color: var(--accent); }
   article h3 { font-size: 1.08em; margin: 1.2em 0 0.4em; }
   article p { margin: 0.7em 0; }
@@ -50,8 +49,6 @@
     border-left: 4px solid var(--quote-border);
     border-radius: 0 8px 8px 0;
   }
-  article blockquote p { margin: 0.3em 0; }
-  article blockquote strong { color: var(--accent); }
   article ul, article ol { margin: 0.5em 0 0.5em 1.6em; }
   article li { margin: 0.3em 0; }
   article code {
@@ -73,54 +70,29 @@
     line-height: 1.6;
     border: 1px solid var(--border);
   }
-  article pre code {
-    background: none;
-    padding: 0;
-    border-radius: 0;
-  }
+  article pre code { background: none; padding: 0; border-radius: 0; }
   article table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.2em 0;
-    font-size: 0.88em;
-    display: block;
-    overflow-x: auto;
+    width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 0.88em;
+    display: block; overflow-x: auto;
   }
-  article table th,
-  article table td {
-    border: 1px solid var(--border);
-    padding: 10px 14px;
-    text-align: left;
-    vertical-align: top;
-  }
-  article table th {
-    background: var(--accent-light);
-    font-weight: 600;
-    white-space: nowrap;
-  }
+  article table th, article table td { border: 1px solid var(--border); padding: 10px 14px; text-align: left; vertical-align: top; }
+  article table th { background: var(--accent-light); font-weight: 600; white-space: nowrap; }
   article table tr:nth-child(even) { background: #fafafa; }
-  article table tr:hover { background: #f1f5f9; }
   article hr { border: none; border-top: 2px solid var(--border); margin: 2em 0; }
-  article img { max-width: 100%; height: auto; border-radius: 8px; }
-  .diagram-container { margin: 1.5em 0; text-align: center; }
+  
+  .diagram-container { margin: 1.5em 0; text-align: center; overflow: hidden; width: 100%; }
   .diagram-title { font-size: 0.95em; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
   .diagram-svg { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+  .diagram-svg svg { max-width: 100%; height: auto; }
 
   footer {
-    text-align: center;
-    padding: 30px 0;
-    color: var(--muted);
-    font-size: 0.83em;
-    border-top: 1px solid var(--border);
-    background: var(--card);
+    text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.83em;
+    border-top: 1px solid var(--border); background: var(--card);
   }
-
   @media (max-width: 600px) {
     header { padding: 36px 0 28px; }
     header h1 { font-size: 1.4em; }
     article { padding: 20px 0 40px; }
-    article table { font-size: 0.8em; }
-    article table th, article table td { padding: 6px 8px; }
   }
 </style>
 </head>
@@ -128,7 +100,7 @@
 <header>
   <div class="container">
     <h1>🌾 一个农民的亿万传奇</h1>
-    <p class="subtitle">傅海棠投资体系全景拆解 — 基于“天道”的周期交易框架</p>
+    <p class="subtitle">傅海棠投资体系全景拆解 — 基于"天道"的周期交易框架</p>
     <p class="meta">傅海棠 著 · 读书笔记 · 约11KB</p>
   </div>
 </header>
@@ -141,10 +113,263 @@
 </blockquote>
 <hr />
 <h2>📐 知识全景图</h2>
-<p><div class="diagram-container">
-<div class="diagram-title">📐 知识全景图 — 三层次框架</div>
-<img src="images/fu-haitang-knowledge-map.svg" alt="知识全景图" class="diagram-svg" />
-</div></p>
+<div style="margin:1.5em 0;text-align:center;overflow:hidden;width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+<div style="font-size:0.95em;color:#64748b;margin-bottom:8px;font-weight:600;">📐 知识全景图 — 三层次框架</div>
+<svg style="max-width:100%;height:auto;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadow-light" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0.5" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6741d9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#5f3dc4;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="faith-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0bfff;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#d0bfff;stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="method-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a5d8ff;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#e7f5ff;stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="tool-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b2f2bb;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#d3f9d8;stop-opacity:0.15"/>
+    </linearGradient>
+    <marker id="arrow-down" markerWidth="10" markerHeight="8" refX="5" refY="8" orient="auto">
+      <polygon points="0,0 10,0 5,8" fill="#868e96"/>
+    </marker>
+    <marker id="arrow-right" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 10,4 0,8" fill="#adb5bd"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title Bar -->
+  <rect x="0" y="0" width="1200" height="56" fill="url(#header-grad)" rx="12"/>
+  <rect x="0" y="28" width="1200" height="28" fill="url(#header-grad)"/>
+  <text x="600" y="36" text-anchor="middle" fill="#fff" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="bold">《一个农民的亿万传奇》知识全景图</text>
+
+  <!-- ═══════════ 第一层：信仰层 ═══════════ -->
+  <rect x="30" y="72" width="1140" height="195" rx="10" fill="url(#faith-grad)" stroke="#d0bfff" stroke-width="1.5" filter="url(#shadow-light)"/>
+
+  <!-- Layer Label -->
+  <rect x="30" y="72" width="160" height="32" rx="8" fill="#6741d9"/>
+  <text x="110" y="93" text-anchor="middle" fill="#fff" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="bold">🌈 信仰层：天道</text>
+
+  <text x="50" y="128" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13">
+    <tspan x="50" dy="0" font-weight="bold" fill="#6741d9" font-size="14">核心信仰：</tspan>
+    <tspan dy="0">价格由供需决定，这是自然规律（天道），不是庄家也不是K线可以改变的</tspan>
+  </text>
+
+  <!-- Three axioms -->
+  <rect x="50" y="148" width="340" height="48" rx="8" fill="#fff" stroke="#d0bfff" stroke-width="1" filter="url(#shadow-light)"/>
+  <text x="220" y="166" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">公理一：万物皆有周期</text>
+  <text x="220" y="184" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">盛极而衰，否极泰来，经验不可逆</text>
+
+  <rect x="420" y="148" width="340" height="48" rx="8" fill="#fff" stroke="#d0bfff" stroke-width="1" filter="url(#shadow-light)"/>
+  <text x="590" y="166" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">公理二：价格不能长期偏离成本</text>
+  <text x="590" y="184" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">低于成本→减产→回升；暴利→扩产→回落</text>
+
+  <rect x="790" y="148" width="350" height="48" rx="8" fill="#fff" stroke="#d0bfff" stroke-width="1" filter="url(#shadow-light)"/>
+  <text x="965" y="166" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">公理三：人性不变</text>
+  <text x="965" y="184" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">追涨杀跌是本能，极端时刻共识总是错的</text>
+
+  <!-- Core formula -->
+  <rect x="250" y="210" width="700" height="44" rx="22" fill="#6741d9" opacity="0.08" stroke="#6741d9" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="600" y="238" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">核⼼公式：成本 → 供给收缩 → 价格底部 → 供需反转 → 趋势爆发</text>
+
+  <!-- Arrow from faith to method -->
+  <line x1="600" y1="267" x2="600" y2="285" stroke="#868e96" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- ═══════════ 第二层：方法层 ═══════════ -->
+  <rect x="30" y="290" width="1140" height="290" rx="10" fill="url(#method-grad)" stroke="#a5d8ff" stroke-width="1.5" filter="url(#shadow-light)"/>
+
+  <rect x="30" y="290" width="160" height="32" rx="8" fill="#1864ab"/>
+  <text x="110" y="311" text-anchor="middle" fill="#fff" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="bold">⚙️ 方法层：原则+操作</text>
+
+  <!-- ─── 左：四原则 ─── -->
+  <rect x="50" y="335" width="520" height="230" rx="8" fill="#fff" opacity="0.9" stroke="#a5d8ff" stroke-width="1" filter="url(#shadow-light)"/>
+  <text x="310" y="358" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="bold">核心四原则</text>
+
+  <!-- Principle 1 -->
+  <rect x="65" y="372" width="230" height="70" rx="6" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1"/>
+  <text x="180" y="392" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">① 物极必反</text>
+  <text x="180" y="410" text-anchor="middle" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">价格·情绪·供需 三个极端</text>
+  <text x="180" y="426" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">跌多必涨，涨多必跌</text>
+
+  <!-- Principle 2 -->
+  <rect x="310" y="372" width="245" height="70" rx="6" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1"/>
+  <text x="432" y="392" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">② 成本决定底部</text>
+  <text x="432" y="410" text-anchor="middle" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">低于成本=不可持续</text>
+  <text x="432" y="426" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">算全行业成本，不是龙头成本</text>
+
+  <!-- Principle 3 -->
+  <rect x="65" y="452" width="230" height="70" rx="6" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1"/>
+  <text x="180" y="472" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">③ 供需决定一切</text>
+  <text x="180" y="490" text-anchor="middle" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">不看K线，看种多少收多少</text>
+  <text x="180" y="506" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">需求必须是不可逆的刚需</text>
+
+  <!-- Principle 4 -->
+  <rect x="310" y="452" width="245" height="70" rx="6" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1"/>
+  <text x="432" y="472" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">④ 极端情绪是反指</text>
+  <text x="432" y="490" text-anchor="middle" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">一致看空→买；一致看多→卖</text>
+  <text x="432" y="506" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">"这次不一样"=最危险的信号</text>
+
+  <!-- Arrow between sections -->
+  <line x1="570" y1="460" x2="600" y2="460" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow-right)"/>
+
+  <!-- ─── 右：六步法 ─── -->
+  <rect x="610" y="335" width="540" height="230" rx="8" fill="#fff" opacity="0.9" stroke="#a5d8ff" stroke-width="1" filter="url(#shadow-light)"/>
+  <text x="880" y="358" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="bold">六步操作系统</text>
+
+  <!-- Six steps in a horizontal flow -->
+  <!-- Step 1 -->
+  <rect x="625" y="375" width="80" height="42" rx="6" fill="#fff3bf" stroke="#fab005" stroke-width="1.5"/>
+  <text x="665" y="392" text-anchor="middle" fill="#e67700" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">选品</text>
+  <text x="665" y="407" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">强周期·刚需</text>
+
+  <line x1="705" y1="396" x2="720" y2="396" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- Step 2 -->
+  <rect x="723" y="375" width="80" height="42" rx="6" fill="#fff3bf" stroke="#fab005" stroke-width="1.5"/>
+  <text x="763" y="392" text-anchor="middle" fill="#e67700" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">调研</text>
+  <text x="763" y="407" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">实地确认成本</text>
+
+  <line x1="803" y1="396" x2="818" y2="396" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- Step 3 -->
+  <rect x="821" y="375" width="80" height="42" rx="6" fill="#ffc9c9" stroke="#ff6b6b" stroke-width="1.5"/>
+  <text x="861" y="392" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">等待</text>
+  <text x="861" y="407" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">极端信号集齐</text>
+
+  <line x1="901" y1="396" x2="916" y2="396" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- Step 4 -->
+  <rect x="919" y="375" width="80" height="42" rx="6" fill="#b2f2bb" stroke="#51cf66" stroke-width="1.5"/>
+  <text x="959" y="392" text-anchor="middle" fill="#2b8a3e" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">建仓</text>
+  <text x="959" y="407" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">60-70%分批次</text>
+
+  <!-- Second row of steps -->
+  <line x1="665" y1="417" x2="665" y2="442" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+
+  <rect x="625" y="445" width="80" height="42" rx="6" fill="#d0bfff" stroke="#845ef7" stroke-width="1.5"/>
+  <text x="665" y="462" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">① 选品</text>
+  <text x="665" y="477" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">标的筛选</text>
+
+  <line x1="705" y1="466" x2="720" y2="466" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <rect x="723" y="445" width="80" height="42" rx="6" fill="#a5d8ff" stroke="#4dabf7" stroke-width="1.5"/>
+  <text x="763" y="462" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">② 调研</text>
+  <text x="763" y="477" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">成本+供需确认</text>
+
+  <line x1="803" y1="466" x2="818" y2="466" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <rect x="821" y="445" width="80" height="42" rx="6" fill="#a5d8ff" stroke="#4dabf7" stroke-width="1.5"/>
+  <text x="861" y="462" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">③ 等待</text>
+  <text x="861" y="477" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">极端信号评分</text>
+
+  <line x1="901" y1="466" x2="916" y2="466" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <rect x="919" y="445" width="80" height="42" rx="6" fill="#a5d8ff" stroke="#4dabf7" stroke-width="1.5"/>
+  <text x="959" y="462" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">④ 建仓</text>
+  <text x="959" y="477" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">倒金字塔加仓</text>
+
+  <!-- Step 5-6 in a row below -->
+  <line x1="821" y1="487" x2="821" y2="508" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-down)"/>
+
+  <rect x="723" y="512" width="80" height="42" rx="6" fill="#d0bfff" stroke="#845ef7" stroke-width="1.5"/>
+  <text x="763" y="529" text-anchor="middle" fill="#6741d9" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">⑤ 持仓</text>
+  <text x="763" y="544" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">看基本面死扛</text>
+
+  <line x1="803" y1="533" x2="818" y2="533" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <rect x="821" y="512" width="80" height="42" rx="6" fill="#ffc9c9" stroke="#ff6b6b" stroke-width="1.5"/>
+  <text x="861" y="529" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">⑥ 平仓</text>
+  <text x="861" y="544" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">反转信号出现</text>
+
+  <!-- Key battle summary -->
+  <rect x="625" y="512" width="85" height="42" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="667" y="530" text-anchor="middle" fill="#868e96" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10">经典战役</text>
+  <text x="667" y="545" text-anchor="middle" fill="#adb5bd" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">棉花·大蒜·PVC</text>
+
+  <line x1="710" y1="533" x2="720" y2="533" stroke="#adb5bd" stroke-width="1.5" marker-end="url(#arrow-right)"/>
+
+  <!-- Arrow from method to tool -->
+  <line x1="600" y1="580" x2="600" y2="598" stroke="#868e96" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- ═══════════ 第三层：工具层 ═══════════ -->
+  <rect x="30" y="603" width="1140" height="275" rx="10" fill="url(#tool-grad)" stroke="#b2f2bb" stroke-width="1.5" filter="url(#shadow-light)"/>
+
+  <rect x="30" y="603" width="160" height="32" rx="8" fill="#2b8a3e"/>
+  <text x="110" y="624" text-anchor="middle" fill="#fff" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="bold">🛠️ 工具层：判断+风控</text>
+
+  <!-- Tool 1: Scorecard -->
+  <rect x="50" y="650" width="350" height="210" rx="8" fill="#fff" stroke="#b2f2bb" stroke-width="1.5" filter="url(#shadow-light)"/>
+  <text x="225" y="676" text-anchor="middle" fill="#2b8a3e" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">📊 极端信号评分卡（12分制）</text>
+  <line x1="65" y1="686" x2="385" y2="686" stroke="#e9ecef" stroke-width="1"/>
+
+  <text x="65" y="706" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">价格信号   □ < 成本20%+ (2分)  □ < 成本 (1分)  □ 成本+ (0分)</text>
+  <text x="65" y="726" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">利润信号   □ 全行业亏 (2分)  □ 部分亏 (1分)  □ 盈利 (0分)</text>
+  <text x="65" y="746" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">供应信号   □ 已减产 (2分)  □ 有意向 (1分)  □ 扩产 (0分)</text>
+  <text x="65" y="766" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">库存信号   □ 极端位置 (2分)  □ 中性 (1分)  □ 高位 (0分)</text>
+  <text x="65" y="786" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">情绪信号   □ 一致悲观 (2分)  □ 分歧 (1分)  □ 一致乐观 (0分)</text>
+  <text x="65" y="806" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">资金信号   □ 爆仓 (2分)  □ 平衡 (1分)  □ 杠杆涌入 (0分)</text>
+
+  <rect x="65" y="818" width="280" height="28" rx="14" fill="#d3f9d8" stroke="#51cf66" stroke-width="1"/>
+  <text x="205" y="837" text-anchor="middle" fill="#2b8a3e" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">总分 ≥ 8 → 行动  │  5-7 → 关注  │  ≤ 4 → 放弃</text>
+
+  <!-- Tool 2: Cost anchor -->
+  <rect x="425" y="650" width="350" height="210" rx="8" fill="#fff" stroke="#b2f2bb" stroke-width="1.5" filter="url(#shadow-light)"/>
+  <text x="600" y="676" text-anchor="middle" fill="#2b8a3e" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">💰 成本锚定速查</text>
+  <line x1="440" y1="686" x2="760" y2="686" stroke="#e9ecef" stroke-width="1"/>
+
+  <rect x="440" y="700" width="150" height="24" rx="4" fill="#e7f5ff"/>
+  <text x="515" y="716" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">农产品</text>
+  <text x="600" y="716" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">→ 种植成本（种子+化肥+人工+地租）</text>
+
+  <rect x="440" y="732" width="150" height="24" rx="4" fill="#e7f5ff"/>
+  <text x="515" y="748" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">工业品</text>
+  <text x="600" y="748" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">→ 全行业平均生产成本（非龙头成本）</text>
+
+  <rect x="440" y="764" width="150" height="24" rx="4" fill="#e7f5ff"/>
+  <text x="515" y="780" text-anchor="middle" fill="#1864ab" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">金融周期股</text>
+  <text x="600" y="780" fill="#495057" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">→ 内含价值(Embedded Value) / PB</text>
+
+  <text x="440" y="808" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">⚠ 常见错误：用龙头成本代全行业、忽略固定成本分摊、把补贴算进成本</text>
+
+  <rect x="440" y="822" width="320" height="26" rx="13" fill="#ffc9c9" stroke="#ff6b6b" stroke-width="1"/>
+  <text x="600" y="840" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="bold">核心纪律：低于成本不设止损，高于成本严格止损</text>
+
+  <!-- Tool 3: Red lines -->
+  <rect x="800" y="650" width="350" height="210" rx="8" fill="#fff" stroke="#ffc9c9" stroke-width="1.5" filter="url(#shadow-light)"/>
+  <text x="975" y="676" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="bold">🚫 风险红线</text>
+  <line x1="815" y1="686" x2="1135" y2="686" stroke="#e9ecef" stroke-width="1"/>
+
+  <rect x="815" y="700" width="320" height="28" rx="6" fill="#fff5f5" stroke="#ffc9c9" stroke-width="1"/>
+  <text x="975" y="718" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">❌ 需求可能永久消失的品种（诺基亚陷阱）</text>
+
+  <rect x="815" y="735" width="320" height="28" rx="6" fill="#fff5f5" stroke="#ffc9c9" stroke-width="1"/>
+  <text x="975" y="753" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">❌ 成本算不清的纯概念股</text>
+
+  <rect x="815" y="770" width="320" height="28" rx="6" fill="#fff5f5" stroke="#ffc9c9" stroke-width="1"/>
+  <text x="975" y="788" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">❌ 政策干预频繁的品种（国储/限价/关税）</text>
+
+  <rect x="815" y="805" width="320" height="28" rx="6" fill="#fff5f5" stroke="#ffc9c9" stroke-width="1"/>
+  <text x="975" y="823" text-anchor="middle" fill="#c92a2a" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">❌ 杠杆过高，借钱交易</text>
+
+  <!-- Pain section -->
+  <rect x="815" y="842" width="320" height="18" rx="9" fill="#fff3bf"/>
+  <text x="975" y="855" text-anchor="middle" fill="#e67700" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="9">持仓心法：不看账户浮亏看基本面·忍受20-30%回撤·关掉交易群</text>
+
+</svg>
+
+</div>
 <blockquote>
 <p><strong>全景图使用说明</strong>：全书的三个层级从上到下——信仰层（世界观的根）、方法层（具体怎么操作）、工具层（用什么工具判断）。阅读时先理解信仰层，再进入方法层拆解，最后用工具层做实战落地。</p>
 </blockquote>
