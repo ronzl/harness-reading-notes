@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《一个农民的亿万传奇》— 傅海棠投资体系全景拆解</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --accent: #6741d9;
+    --accent-light: #e9defa;
+    --border: #e2e8f0;
+    --quote-bg: #f1f5f9;
+    --quote-border: #6741d9;
+    --code-bg: #f8f9fa;
+    --code-text: #1e293b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+  
+  header {
+    background: linear-gradient(135deg, #4a1a8a, #6741d9);
+    color: white;
+    padding: 56px 0 44px;
+    text-align: center;
+  }
+  header h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
+  header .subtitle { font-size: 1em; opacity: 0.8; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+  header .meta { margin-top: 18px; font-size: 0.82em; opacity: 0.55; }
+
+  article { padding: 36px 0 60px; }
+  article h1 { font-size: 1.65em; margin: 1.6em 0 0.5em; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--text); }
+  article h2 { font-size: 1.3em; margin: 1.5em 0 0.5em; color: var(--accent); }
+  article h3 { font-size: 1.08em; margin: 1.2em 0 0.4em; }
+  article p { margin: 0.7em 0; }
+  article blockquote {
+    margin: 1em 0;
+    padding: 14px 20px;
+    background: var(--quote-bg);
+    border-left: 4px solid var(--quote-border);
+    border-radius: 0 8px 8px 0;
+  }
+  article blockquote p { margin: 0.3em 0; }
+  article blockquote strong { color: var(--accent); }
+  article ul, article ol { margin: 0.5em 0 0.5em 1.6em; }
+  article li { margin: 0.3em 0; }
+  article code {
+    background: var(--accent-light);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    color: var(--text);
+  }
+  article pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1em 0;
+    font-size: 0.85em;
+    line-height: 1.6;
+    border: 1px solid var(--border);
+  }
+  article pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+  article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+    font-size: 0.88em;
+    display: block;
+    overflow-x: auto;
+  }
+  article table th,
+  article table td {
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  article table th {
+    background: var(--accent-light);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  article table tr:nth-child(even) { background: #fafafa; }
+  article table tr:hover { background: #f1f5f9; }
+  article hr { border: none; border-top: 2px solid var(--border); margin: 2em 0; }
+  article img { max-width: 100%; height: auto; border-radius: 8px; }
+  .diagram-container { margin: 1.5em 0; text-align: center; }
+  .diagram-title { font-size: 0.95em; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+  .diagram-svg { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid var(--border); }
+
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--muted);
+    font-size: 0.83em;
+    border-top: 1px solid var(--border);
+    background: var(--card);
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 36px 0 28px; }
+    header h1 { font-size: 1.4em; }
+    article { padding: 20px 0 40px; }
+    article table { font-size: 0.8em; }
+    article table th, article table td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>🌾 一个农民的亿万传奇</h1>
+    <p class="subtitle">傅海棠投资体系全景拆解 — 基于“天道”的周期交易框架</p>
+    <p class="meta">傅海棠 著 · 读书笔记 · 约11KB</p>
+  </div>
+</header>
+<article>
+  <div class="container">
+<h1>《一个农民的亿万传奇》—— 傅海棠投资体系全景拆解</h1>
+<blockquote>
+<p><strong>适合读者</strong>：周期投资者、商品期货交易者、想理解&quot;成本锚定&quot;思维的价值投资者<br />
+<strong>不适合</strong>：纯短线/技术分析者、只做成长股的人、不接受&quot;重仓等待数月&quot;风格的人</p>
+</blockquote>
+<hr />
+<h2>📐 知识全景图</h2>
+<p><div class="diagram-container">
+<div class="diagram-title">📐 知识全景图 — 三层次框架</div>
+<img src="images/fu-haitang-knowledge-map.svg" alt="知识全景图" class="diagram-svg" />
+</div></p>
+<blockquote>
+<p><strong>全景图使用说明</strong>：全书的三个层级从上到下——信仰层（世界观的根）、方法层（具体怎么操作）、工具层（用什么工具判断）。阅读时先理解信仰层，再进入方法层拆解，最后用工具层做实战落地。</p>
+</blockquote>
+<hr />
+<h2>一、信仰层：天道投资哲学</h2>
+<h3>1.1 什么是&quot;天道&quot;</h3>
+<p>傅海棠的核心世界观：<strong>价格由供需决定，这是自然规律，和人为操纵无关</strong>。他出身山东农民，没学过经济学，但种地、养猪、倒腾大蒜的经历给了他一套直觉式的&quot;成本—供需&quot;判断模型。</p>
+<table>
+<thead>
+<tr>
+  <th>维度</th>
+  <th>主流市场的认知</th>
+  <th>傅海棠的认知</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>价格由谁决定</td>
+  <td>庄家、资金、K线形态</td>
+  <td>供需关系，自然规律</td>
+</tr>
+<tr>
+  <td>市场是否可以预测</td>
+  <td>有不确定性，概率游戏</td>
+  <td>确定性机会存在，只是不常出现</td>
+</tr>
+<tr>
+  <td>交易是科学还是艺术</td>
+  <td>艺术成分大</td>
+  <td>科学成分大（成本锚是确定的）</td>
+</tr>
+<tr>
+  <td>错误源于</td>
+  <td>技术不好、心态不稳</td>
+  <td>违背了天道规律</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心信念</strong>：市场不是赌场，<strong>自然规律（天道）在市场中的表现形式就是供需法则</strong>。当供需严重失衡时，价格一定会回归——这不是预测，是必然。</p>
+<h3>1.2 三条公理</h3>
+<p>傅海棠的天道体系建立在三条不可动摇的公理之上：</p>
+<p><strong>公理一：万物皆有周期</strong></p>
+<ul>
+<li>盛极而衰、否极泰来，这是自然规律</li>
+<li>农产品：丰年→歉年 循环；工业品：扩产→减产 循环</li>
+<li>人的情绪也在周期中：贪婪→恐惧→贪婪</li>
+</ul>
+<p><strong>公理二：价格不可能长期偏离成本</strong></p>
+<ul>
+<li>低于成本 → 亏钱 → 减产 → 供应减少 → 价格回升（必然）</li>
+<li>高于成本暴利 → 赚钱 → 扩产 → 供应增加 → 价格回落（必然）</li>
+<li>这是经济规律，和任何人的意志无关</li>
+</ul>
+<p><strong>公理三：人性不变</strong></p>
+<ul>
+<li>追涨杀跌是本能，不会因为有人读过书就改变</li>
+<li>极端时刻，共识总是错的（一致性预期是反指）</li>
+<li>最值钱的东西出现在没人想要的时候</li>
+</ul>
+<hr />
+<h2>二、方法层：核心四原则</h2>
+<h3>原则一：物极必反</h3>
+<blockquote>
+<p>&quot;跌得多了就要涨，涨得多了就要跌——这是天道，不是技术分析。&quot;</p>
+</blockquote>
+<p>傅海棠的&quot;物极必反&quot;是三层次可量化的框架：</p>
+<p><strong>① 价格极端</strong></p>
+<ul>
+<li>价格低于全行业平均成本20%+ = 极端买入信号</li>
+<li>价格高于成本100%+（暴利水平）= 极端卖出信号</li>
+<li>底层逻辑：低于成本→生产者亏钱→必然减产→供应收缩→价格回升</li>
+</ul>
+<p><strong>② 情绪极端</strong></p>
+<ul>
+<li>全市场一致看空，没人敢碰 → 最安全的买入时机</li>
+<li>全市场一致看多，&quot;这次不一样&quot; → 最危险的卖出时机</li>
+<li>傅海棠原话：&quot;大多数人看好的时候，我就不做了；大多数人绝望的时候，我就进去了。&quot;</li>
+</ul>
+<p><strong>③ 供需极端</strong></p>
+<ul>
+<li>供应端：减产、停产、破产新闻频出，种植面积/产能连续几年下降</li>
+<li>需求端：需求只是被压抑（不是消失），一旦价格合适就会恢复</li>
+<li><strong>关键判断</strong>：需求是否<strong>不可逆</strong>——棉花要穿衣、粮食要吃饭、水泥要盖房，这些是刚需</li>
+</ul>
+<blockquote>
+<p><strong>实操清单：判断&quot;极端&quot;四问</strong></p>
+<ol>
+<li>价格是否低于全行业平均生产成本20%以上？</li>
+<li>全行业是否大面积亏损，连龙头都在亏？</li>
+<li>融资盘是否大面积爆仓？市场情绪是否彻底绝望？</li>
+<li>供应端是否已经出现切实的减产/停产/退出？</li>
+</ol>
+</blockquote>
+<h3>原则二：成本决定底部</h3>
+<p>这是全书最硬核的框架。<strong>价格可以低于成本，但不能长期低于成本</strong>——这是经济规律。</p>
+<p><strong>成本底的推导链条：</strong></p>
+<pre><code>价格 &lt; 成本 → 生产者亏损 → 资金链断裂 → 减产/停产 → 供应减少 → 供不应求 → 价格回升
+            ↑                                                                       │
+            └───────────────────────── 必然发生 ────────────────────────────────────┘
+</code></pre>
+<p><strong>不同标的的成本锚：</strong></p>
+<table>
+<thead>
+<tr>
+  <th>标的类型</th>
+  <th>成本锚</th>
+  <th>极端信号</th>
+  <th>供应弹性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>农产品</strong>（棉、蒜、豆）</td>
+  <td>种植成本（种子+化肥+人工+地租）</td>
+  <td>低于种植成本20%+，农民改种</td>
+  <td>最小（一年一度种植周期）</td>
+</tr>
+<tr>
+  <td><strong>工业品</strong>（钢铁、水泥、化工）</td>
+  <td>全行业平均生产成本</td>
+  <td>全行业亏损，高成本产线停产</td>
+  <td>中（关停成本高，底部时间长）</td>
+</tr>
+<tr>
+  <td><strong>金融周期股</strong>（保险、券商）</td>
+  <td>内含价值(Embedded Value) / 净资产</td>
+  <td>PB &lt; 0.5-0.6</td>
+  <td>大（无实物成本，靠利润弹性）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ 成本计算的三大常见错误（傅海棠反复强调）：</strong></p>
+<ul>
+<li>❌ <strong>用龙头成本代替全行业成本</strong>——龙头成本最低，参考意义有限。要看全行业平均成本，算大多数企业的盈亏线</li>
+<li>❌ <strong>忽略固定成本分摊变化</strong>——产量下降→固定成本分摊变厚→完全成本实际上升，利润恶化更快</li>
+<li>❌ <strong>把政策补贴算进成本</strong>——补贴可能取消，回归真实成本后会更痛苦</li>
+</ul>
+<h3>原则三：供需决定一切</h3>
+<blockquote>
+<p>&quot;我做期货不看K线，我看的是这个：种了多少？收了多少？用了多少？还剩多少？&quot;</p>
+</blockquote>
+<p><strong>供应端分析：</strong></p>
+<ul>
+<li>当前产量/产能利用率（是否在满产？是否在减产？）</li>
+<li>新增产能周期（多久能投产？时间长=供应弹性小=爆发力强）</li>
+<li>库存水平（显性+隐性库存，库销比在历史什么分位？）</li>
+</ul>
+<p><strong>需求端分析：</strong></p>
+<ul>
+<li>下游开工率（真正在用还是囤着？）</li>
+<li>终端消费趋势（增长/持平/下降，幅度多大？）</li>
+<li><strong>核心判断</strong>：需求是被压抑还是永久消失？（后者放弃）</li>
+</ul>
+<p><strong>傅式供需框架的特有做法：</strong></p>
+<ul>
+<li>不依赖宏观报告，而是<strong>做实体调研</strong>——去产区、去港口、去工厂、去批发市场</li>
+<li>把模糊的&quot;供需&quot;变成可量化的几个数字：产量、库存量、消费量、进口量</li>
+<li>关注边际变化：市场往往过度关注总量，忽略了变化的方向和速度</li>
+</ul>
+<h3>原则四：极端情绪是反向指标</h3>
+<blockquote>
+<p>&quot;行情在绝望中诞生，在犹豫中成长，在狂欢中结束。&quot;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+  <th>情绪阶段</th>
+  <th>市场状态</th>
+  <th>傅式操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>绝望期</strong></td>
+  <td>所有人看空，无人问津</td>
+  <td>✅ 建仓买入</td>
+</tr>
+<tr>
+  <td><strong>怀疑期</strong></td>
+  <td>价格小幅回升但没人信</td>
+  <td>持仓等待</td>
+</tr>
+<tr>
+  <td><strong>确认期</strong></td>
+  <td>趋势明朗，越来越多的人加入</td>
+  <td>持仓不动</td>
+</tr>
+<tr>
+  <td><strong>狂欢期</strong></td>
+  <td>所有人都看多，媒体唱多</td>
+  <td>✅ 逐步平仓</td>
+</tr>
+<tr>
+  <td><strong>崩溃期</strong></td>
+  <td>价格大跌，恐慌蔓延</td>
+  <td>已平仓，等待下一个周期</td>
+</tr>
+</tbody>
+</table>
+<p><strong>量化判断标准</strong>：</p>
+<ul>
+<li>极端看空：行业展会没人去、分析师全是卖出评级、相关论坛只剩骂声、身边没人谈这个品种</li>
+<li>极端看多：人人都在讨论、媒体密集报道、新手跑步入场、&quot;永远涨&quot;的说法出现</li>
+</ul>
+<hr />
+<h2>三、经典战役复盘</h2>
+<h3>战役一：2010年棉花（奠定亿万身价的一战）</h3>
+<table>
+<thead>
+<tr>
+  <th>维度</th>
+  <th>详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>时间</strong></td>
+  <td>2009年酝酿 → 2010年爆发</td>
+</tr>
+<tr>
+  <td><strong>入场</strong></td>
+  <td>1.6万元/吨（低于种植成本约2万元/吨）</td>
+</tr>
+<tr>
+  <td><strong>出场</strong></td>
+  <td>3.4万元/吨</td>
+</tr>
+<tr>
+  <td><strong>盈利倍率</strong></td>
+  <td>约20倍（5万 → 100万 → 600万 → 1.2亿）</td>
+</tr>
+<tr>
+  <td><strong>持仓周期</strong></td>
+  <td>约1年</td>
+</tr>
+</tbody>
+</table>
+<p><strong>极端信号检核（全对）：</strong></p>
+<ul>
+<li>✅ 价格极端：棉花价格多年低迷，低于种植成本30%+</li>
+<li>✅ 利润极端：棉农大面积亏损，种植面积连续3年下降</li>
+<li>✅ 供应极端：全球棉花产量降至历史低位</li>
+<li>✅ 情绪极端：没人在乎棉花，分析师全在说&quot;结构性过剩&quot;</li>
+<li>✅ 库存极端：库存/消费比处于数十年低位</li>
+<li>✅ 需求极端：纺织需求正在复苏（中国+全球），但被低估</li>
+</ul>
+<p><strong>操作复盘：</strong></p>
+<ul>
+<li>2009年就开始关注，但等到极端信号集齐才入场</li>
+<li>中间经历大幅回撤（浮亏几十万→扛住），靠成本锚支撑信念</li>
+<li>3万以上开始逐步减仓，3.4万全部清仓</li>
+<li><strong>傅海棠的自我批评</strong>：平仓偏早，3万以上减仓太快，少赚了一大截</li>
+</ul>
+<h3>战役二：2015年大蒜</h3>
+<table>
+<thead>
+<tr>
+  <th>维度</th>
+  <th>详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>背景</strong></td>
+  <td>蒜价连续两年低迷，蒜农严重亏损</td>
+</tr>
+<tr>
+  <td><strong>入场</strong></td>
+  <td>4-5毛/斤（种植成本约0.8元/斤）</td>
+</tr>
+<tr>
+  <td><strong>出场</strong></td>
+  <td>2元+/斤</td>
+</tr>
+<tr>
+  <td><strong>盈利倍率</strong></td>
+  <td>约3-4倍</td>
+</tr>
+<tr>
+  <td><strong>持仓周期</strong></td>
+  <td>数月</td>
+</tr>
+</tbody>
+</table>
+<p><strong>极端信号检核：</strong></p>
+<ul>
+<li>✅ 价格低于成本50%+ → 极端</li>
+<li>✅ 种植面积大幅缩减</li>
+<li>✅ 蒜农大面积改种其他作物</li>
+<li>✅ 库存消化充分</li>
+<li>⚠️ 需求相对稳定（大蒜是调味刚需）</li>
+</ul>
+<p><strong>与棉花的异同：</strong></p>
+<ul>
+<li>相同：极端价格低于成本+供应收缩+不可逆需求</li>
+<li>不同：大蒜体量小、地域性强、价格弹性大（容易暴涨暴跌）</li>
+</ul>
+<h3>其他成功案例（简短）</h3>
+<table>
+<thead>
+<tr>
+  <th>品种</th>
+  <th>年份</th>
+  <th>核心逻辑</th>
+  <th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>豆粕</td>
+  <td>2016</td>
+  <td>南美减产+需求复苏</td>
+  <td>大幅盈利</td>
+</tr>
+<tr>
+  <td>PVC</td>
+  <td>2016</td>
+  <td>供给侧改革+成本支撑</td>
+  <td>大幅盈利</td>
+</tr>
+<tr>
+  <td>螺纹钢</td>
+  <td>2016</td>
+  <td>去产能+需求超预期</td>
+  <td>大幅盈利</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>四、六步操作系统（标准化流程）</h2>
+<pre><code>┌──────────────────────────────────────────────────────────────────────┐
+│                        傅海棠六步操作系统                              │
+│                                                                      │
+│  第一步：选品                                                         │
+│  ├─ 必须是强周期品种（产成品价格波动剧烈）                                │
+│  ├─ 必须有明确的生产成本锚                                              │
+│  ├─ 必须经历足够长的下跌周期（不是短期调整）                               │
+│  └─ 需求必须不可逆（刚需）                                              │
+│                                                                      │
+│  第二步：实地调研确认                                                    │
+│  ├─ 亲自去产区/厂区看（不做纯数据推演）                                   │
+│  ├─ 确认全行业平均成本（不是龙头成本）                                    │
+│  ├─ 确认减产已经在发生（不是&quot;可能减产&quot;，是&quot;已经减产&quot;）                      │
+│  └─ 确认库存处于什么位置                                                │
+│                                                                      │
+│  第三步：等待极端信号集齐                                                  │
+│  ├─ 价格极端（低于成本20%+）                                           │
+│  ├─ 利润极端（全行业亏损）                                              │
+│  ├─ 情绪极端（所有人绝望）                                              │
+│  ├─ 供应极端（减产停产新闻频出）                                         │
+│  ├─ 库存极端（处于历史极端位置）                                         │
+│  └─ 至少4/6个信号集齐才行动                                             │
+│                                                                      │
+│  第四步：建仓                                                           │
+│  ├─ 第一批试仓30%                                                     │
+│  ├─ 信号确认后加至60-70%                                              │
+│  ├─ 倒金字塔加仓（越跌越买）                                            │
+│  └─ 低于成本不设止损（前提是成本算对了）                                  │
+│                                                                      │
+│  第五步：持仓（最考验人性）                                               │
+│  ├─ 不看账户浮亏浮盈→看基本面数据                                        │
+│  ├─ 忍受20-30%的正常回撤                                               │
+│  ├─ 基本面没变就死扛                                                    │
+│  └─ 像农民种地一样耐心等待收获                                            │
+│                                                                      │
+│  第六步：平仓                                                           │
+│  ├─ 基本面反转信号出现→逐步平仓                                          │
+│  ├─ 暴利出现+扩产新闻→预警                                             │
+│  ├─ 新玩家涌入+全民看多→必须走                                           │
+│  └─ 不做&quot;卖在最高点&quot;的梦→吃鱼身就行                                     │
+└──────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3>仓位管理规则</h3>
+<table>
+<thead>
+<tr>
+  <th>条件</th>
+  <th>仓位</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>极端信号未集齐</td>
+  <td>0%</td>
+  <td>不做，耐心等待</td>
+</tr>
+<tr>
+  <td>极端信号集齐，开始建仓</td>
+  <td>30%</td>
+  <td>第一批试仓</td>
+</tr>
+<tr>
+  <td>信号确认+价格还在极端区间</td>
+  <td>50-60%</td>
+  <td>加仓但不满仓</td>
+</tr>
+<tr>
+  <td>价格回升+基本面验证</td>
+  <td>60-70%</td>
+  <td>重仓参与主升浪</td>
+</tr>
+<tr>
+  <td>浮盈巨大+信号充分兑现</td>
+  <td>→0% 逐步减仓</td>
+  <td>不贪最后一波</td>
+</tr>
+</tbody>
+</table>
+<p><strong>绝对不做的底线：</strong></p>
+<ul>
+<li>需求可能永久消失的品种（如功能手机替代前的诺基亚）</li>
+<li>成本无法算清的品种（纯概念、无成本锚）</li>
+<li>政策干预不可预测的品种（频繁国储抛售、限价）</li>
+<li>杠杆过高（傅海棠原则：自有资金为主，不借钱炒）</li>
+</ul>
+<hr />
+<h2>五、实战工具箱</h2>
+<h3>工具1：极端信号评分卡</h3>
+<p>每次评估标的时的标准化检查表：</p>
+<pre><code class="language-python">评估标的：_________
+评估日期：_________
+当前价格：_________  全行业成本：_________
+
+# === 评分项（每项0-2分）====
+
+# 价格信号
+□ 价格低于全行业平均成本20%+     → 2分
+□ 价格低于成本但不到20%          → 1分
+□ 价格在成本附近或以上           → 0分
+
+# 利润信号
+□ 全行业大面积亏损，龙头也在亏     → 2分
+□ 部分亏损，龙头勉强盈利          → 1分
+□ 全行业盈利                     → 0分
+
+# 供应信号
+□ 切实的减产/停产/退出已经发生     → 2分
+□ 有减产意向但未落地              → 1分
+□ 产能还在扩张                    → 0分
+
+# 库存信号
+□ 库存处于历史极端位置            → 2分
+□ 库存中性                       → 1分
+□ 库存仍在累积/还在高位            → 0分
+
+# 情绪信号
+□ 全市场一致悲观/无人关注          → 2分
+□ 分歧较大                        → 1分
+□ 全市场一致乐观                   → 0分
+
+# 资金信号
+□ 融资盘爆仓/多头大面积亏损        → 2分
+□ 多空平衡                        → 1分
+□ 杠杆资金涌入/空头被逼            → 0分
+
+# === 总分 = _____/12 ===
+≥ 8分  → 强烈行动信号 ✅
+5-7分  → 重点关注，进一步调研 🔍
+≤ 4分  → 放弃，等待更好的机会 ⏳
+</code></pre>
+<h3>工具2：供需核验清单</h3>
+<p><strong>供应端：</strong></p>
+<ul>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>过去3年供应量变化趋势（增/减/持平？幅度？）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>当前有哪些明确减产动作？（具体到产能数、时间表）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>减产是市场行为还是行政命令？（行政减产持续性差）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>新增产能需要多久？（时间越长→爆发力越强）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>进口替代情况如何？（对外依存度高=国内减产效果更显著）</li>
+</ul>
+<p><strong>需求端：</strong></p>
+<ul>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>下游开工率/消费量在什么水平？</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>终端需求过去1-3年趋势方向</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>需求是被压抑还是永久消失？（核心判断）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>替代品是否在侵蚀需求？</li>
+</ul>
+<p><strong>库存端：</strong></p>
+<ul>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>显性库存（交易所/港口/官方数据）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>隐性库存（贸易商库存、社会库存）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>库销比在历史什么分位？（最关键的指标之一）</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" type="checkbox" disabled/>库存集中度（在大户手里还是分散？集中=容易控盘）</li>
+</ul>
+<h3>工具3：持仓期间的心理管理</h3>
+<p>傅海棠模式最难受的不是等待入场的时机，而是<strong>持仓过程中的大幅回撤</strong>。</p>
+<table>
+<thead>
+<tr>
+  <th>痛苦来源</th>
+  <th>傅式应对</th>
+  <th>你的应对工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>浮亏很大，想割肉</td>
+  <td>看成本锚：低于成本就是安全区</td>
+  <td>提前算好成本线，贴电脑上</td>
+</tr>
+<tr>
+  <td>横盘很久，没耐心</td>
+  <td>看供需变化是否在按预期走</td>
+  <td>设置月度供需检核点</td>
+</tr>
+<tr>
+  <td>别人都赚你亏</td>
+  <td>反向指标：他们赚的是趋势钱</td>
+  <td>关掉交易群、雪球、朋友圈</td>
+</tr>
+<tr>
+  <td>媒体全是坏消息</td>
+  <td>媒体总是锦上添花和落井下石</td>
+  <td>你手里的供需数据比媒体客观</td>
+</tr>
+<tr>
+  <td>怀疑自己</td>
+  <td>重新检视：当初的极端信号还在吗</td>
+  <td>把评分卡重新打一遍</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、⚠️ 风险与红线</h2>
+<h3>傅式方法的致命弱点</h3>
+<table>
+<thead>
+<tr>
+  <th>风险点</th>
+  <th>具体表现</th>
+  <th>防护措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>成本算错</strong></td>
+  <td>低估真实成本=抄底在半山腰</td>
+  <td>多方交叉验证：年报、行业网站、实地</td>
+</tr>
+<tr>
+  <td><strong>需求永久消失</strong></td>
+  <td>以为会恢复，实际不会（诺基亚/柯达）</td>
+  <td>确认标的的&quot;不可替代性&quot;</td>
+</tr>
+<tr>
+  <td><strong>资金压力</strong></td>
+  <td>浮亏巨大时被追保、被迫平仓</td>
+  <td>满仓是大忌；只用自有资金</td>
+</tr>
+<tr>
+  <td><strong>时间成本</strong></td>
+  <td>底部可能持续数年（如钢铁2011-2015）</td>
+  <td>同时跟踪5-10个标的，哪个先信号集齐做哪个</td>
+</tr>
+<tr>
+  <td><strong>政策风险</strong></td>
+  <td>国储抛售、限价令、关税突变</td>
+  <td>避开政策干预频繁的品种</td>
+</tr>
+<tr>
+  <td><strong>方向对但操作烂</strong></td>
+  <td>仓位太轻、平仓太早、回撤时被洗出去</td>
+  <td>严格遵守六步流程，不做弹性变通</td>
+</tr>
+</tbody>
+</table>
+<h3>傅海棠自己犯过的错（书中坦承）</h3>
+<ol>
+<li><strong>过早平仓</strong>（棉花）：3万以上就开始减仓，少赚了一大截<ul>
+<li>教训：基本面没变就继续持有，不要提前下车</li>
+</ul>
+</li>
+<li><strong>过于自信</strong>：有时会高估判断的确定性，忽视不利信号<ul>
+<li>教训：持续检视基本面，不要一劳永逸</li>
+</ul>
+</li>
+<li><strong>逆势死扛不是万能</strong>：只有低于成本时才该死扛，成本以上还是要严格止损<ul>
+<li>教训：区分&quot;低于成本的安全&quot;和&quot;高于成本的赌博&quot;</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>七、与主流投资体系的对比</h2>
+<table>
+<thead>
+<tr>
+  <th>维度</th>
+  <th>傅海棠</th>
+  <th>价值投资（巴菲特）</th>
+  <th>技术分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>核心锚</strong></td>
+  <td>生产成本（商品层面）</td>
+  <td>内在价值（企业层面）</td>
+  <td>价格走势（K线层面）</td>
+</tr>
+<tr>
+  <td><strong>买入信号</strong></td>
+  <td>价格低于成本+极端供需</td>
+  <td>价格低于内在价值</td>
+  <td>技术形态突破/金叉</td>
+</tr>
+<tr>
+  <td><strong>持仓逻辑</strong></td>
+  <td>供需变化驱动</td>
+  <td>企业盈利增长驱动</td>
+  <td>趋势延续驱动</td>
+</tr>
+<tr>
+  <td><strong>卖出信号</strong></td>
+  <td>供需反转/暴利出现/扩产</td>
+  <td>价格超过内在价值/基本面恶化</td>
+  <td>趋势反转信号</td>
+</tr>
+<tr>
+  <td><strong>仓位风格</strong></td>
+  <td>重仓集中（60-70%单一品种）</td>
+  <td>适度集中（前10大持仓）</td>
+  <td>分散或全仓</td>
+</tr>
+<tr>
+  <td><strong>研究方法</strong></td>
+  <td>实地调研+供需数据</td>
+  <td>财报分析+护城河评估</td>
+  <td>图表+指标</td>
+</tr>
+<tr>
+  <td><strong>适合品种</strong></td>
+  <td>强周期商品/周期股</td>
+  <td>优质企业股权</td>
+  <td>所有品种</td>
+</tr>
+<tr>
+  <td><strong>最大优势</strong></td>
+  <td>成本锚极清晰，有&quot;底&quot;可算</td>
+  <td>复利+优秀企业长期增长</td>
+  <td>灵活性高，覆盖广</td>
+</tr>
+<tr>
+  <td><strong>最大劣势</strong></td>
+  <td>适用范围窄（仅限于周期品）</td>
+  <td>估值判断有主观性</td>
+  <td>无成本锚，容易失控</td>
+</tr>
+</tbody>
+</table>
+<p>傅式方法与价值投资的关键区别：巴菲特找&quot;好企业&quot;，傅海棠找&quot;坏到不能再坏的行业&quot;——前者买优秀，后者买绝望中的必然反转。</p>
+<hr />
+<h2>八、快速上手路线图</h2>
+<p>如果读了这本书后想实践傅式方法，建议按这个顺序来：</p>
+<pre><code>第1周：建立数据感知
+  ├─ 跟踪5个主要品种（螺纹、棉花、白糖、铜、豆粕）
+  ├─ 找到每个品种的官方数据来源（交易所/行业协会网站）
+  └─ 建立价格跟踪表格（每日记录）
+
+第2周：算清成本
+  ├─ 为每个品种找到全行业平均生产成本
+  ├─ 记录过去5年价格运行区间
+  └─ 标出&quot;低于成本区间&quot;和&quot;暴利区间&quot;
+
+第3-4周：练习判断
+  ├─ 选一个品种，用极端信号评分卡打分
+  ├─ 写出完整的供需分析报告
+  └─ 得出结论：可做/不可做/观望
+
+第5周起：模拟交易
+  ├─ 不真金白银入场，先纸上记录判断和拟操作
+  ├─ 每周复盘：判断对了还是错了？为什么？
+  └─ 连续判断正确+信号集齐再考虑实盘
+</code></pre>
+<hr />
+<blockquote>
+<p><strong>一句话总结</strong>：傅海棠把期货交易变成了一种&quot;种地逻辑&quot;——在所有人绝望的时候，以低于成本的价格播下种子，然后像老农一样看天看地、耐心等待，直到供需矛盾爆发带来收获。这套方法没有秘密，难的是在价格跌到成本以下时你敢不敢买，在浮亏几百万时扛不扛得住。</p>
+</blockquote>
+<hr />
+<p><strong>参考来源</strong>：</p>
+<ul>
+<li>《一个农民的亿万传奇》—— 傅海棠自传</li>
+<li>《傅海棠讲期货》—— 后续访谈集</li>
+<li>雪月霜雪球实战验证框架（<code>fu-haitang-framework</code> skill）</li>
+</ul>
+
+  </div>
+</article>
+<footer>
+  <div class="container">
+    <p>📚 学习笔记合集 · <a href="index.html" style="color: var(--accent); text-decoration: none;">返回首页</a></p>
+  </div>
+</footer>
+</body>
+</html>
