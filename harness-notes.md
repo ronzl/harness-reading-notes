@@ -204,7 +204,21 @@ Rule（底线） → Skill（标准化） → Scripts（硬验证）
 
 作者先花篇幅说清楚项目本身，因为如果不了解项目是什么、复杂度在哪个层级，后面很容易把方法误解成"只有大工程才需要的复杂仪式"。
 
-**JK Launcher 是什么：** 一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：
+**JK Launcher 是什么：**
+
+**主工作台 — 快速入门与状态条、SVN/路径与平台配置、更新与打开 Unity 等主操作、底部日志区：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_01.png)
+
+**工程修复工具箱 — 按修复项展示风险等级，支持预检与执行修复：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_02.png)
+
+**设置 — 可开启小白模式（隐藏高级功能），以及智能建议、悬停详细说明等选项：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_03.png)
+
+ 一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：
 - 工程更新
 - 打开和关闭 Unity
 - SVN 环境检测与权限检查
@@ -321,6 +335,8 @@ SPEC、Rule、Skill 补完以后，系统比最早稳了很多。但当需求继
 > 单个 Agent 很难在长时间、复杂链路的开发里，同时把需求理解、方案设计、风险判断、编码实现、代码自审、测试验证都做好。
 
 不是模型不够聪明，而是**强迫它一次性扮演太多角色**。一个 Agent 如果既理解需求、又设计方案、又判断可行性、又写代码、又自己审自己——一定会出问题。
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_04.png)
 
 ### 5.2 三种路线对比（核心决策章节）
 
@@ -659,12 +675,20 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 ### 9.3 具体落地：dev-map + 任务看板
 
 **dev-map（开发导航地图）：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_07.png)
+
+
 - 规则：**改代码之前先查 dev-map**
 - 内容：功能落点、影响范围、已有模式、标准写法
 - 维护：**开发 Agent 在干活的过程中维护**，而不是 PM 单方面维护
 - 大仓库处理：前面留几页总览，扎进某块开发再翻具体说明——大地图拆成好几本薄册子
 
 **任务看板：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_08.png)
+
+
 - 维护者：PM
 - 内容：当前任务、每个任务到哪个阶段、文档目录、已完成任务的交付结论
 - 作用：新 Agent 进来时先看一眼看板，知道是不是旧需求的延续、有没有类似任务、文档在哪
@@ -742,6 +766,8 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 ---
 
 ## 第十二章：Harness 全貌——四块拼图
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_09.png)
 
 ### 四块拼图
 
