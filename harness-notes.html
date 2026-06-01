@@ -322,7 +322,14 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 <h2>第二章：真正开始搭 Harness 之前，先做了什么</h2>
 <h3>2.1 工程画像：JK Launcher 在做什么</h3>
 <p>作者先花篇幅说清楚项目本身，因为如果不了解项目是什么、复杂度在哪个层级，后面很容易把方法误解成&quot;只有大工程才需要的复杂仪式&quot;。</p>
-<p><strong>JK Launcher 是什么：</strong> 一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：</p>
+<p><strong>JK Launcher 是什么：</strong></p>
+<p><strong>主工作台 — 快速入门与状态条、SVN/路径与平台配置、更新与打开 Unity 等主操作、底部日志区：</strong></p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_01.png" alt="" /></p>
+<p><strong>工程修复工具箱 — 按修复项展示风险等级，支持预检与执行修复：</strong></p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_02.png" alt="" /></p>
+<p><strong>设置 — 可开启小白模式（隐藏高级功能），以及智能建议、悬停详细说明等选项：</strong></p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_03.png" alt="" /></p>
+<p>一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：</p>
 <ul>
 <li>工程更新</li>
 <li>打开和关闭 Unity</li>
@@ -424,6 +431,7 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 <p>单个 Agent 很难在长时间、复杂链路的开发里，同时把需求理解、方案设计、风险判断、编码实现、代码自审、测试验证都做好。</p>
 </blockquote>
 <p>不是模型不够聪明，而是<strong>强迫它一次性扮演太多角色</strong>。一个 Agent 如果既理解需求、又设计方案、又判断可行性、又写代码、又自己审自己——一定会出问题。</p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_04.png" alt="" /></p>
 <h3>5.2 三种路线对比（核心决策章节）</h3>
 <p><strong>路线一：继续强化单 Agent</strong>
 继续给单 Agent 补更长的 SPEC、更多的 Rule、更细的 Skill、更严的检查步骤。</p>
@@ -790,6 +798,7 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 </table>
 <h3>9.3 具体落地：dev-map + 任务看板</h3>
 <p><strong>dev-map（开发导航地图）：</strong></p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_07.png" alt="" /></p>
 <ul>
 <li>规则：<strong>改代码之前先查 dev-map</strong></li>
 <li>内容：功能落点、影响范围、已有模式、标准写法</li>
@@ -797,6 +806,7 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 <li>大仓库处理：前面留几页总览，扎进某块开发再翻具体说明——大地图拆成好几本薄册子</li>
 </ul>
 <p><strong>任务看板：</strong></p>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_08.png" alt="" /></p>
 <ul>
 <li>维护者：PM</li>
 <li>内容：当前任务、每个任务到哪个阶段、文档目录、已完成任务的交付结论</li>
@@ -869,6 +879,7 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 </blockquote>
 <hr />
 <h2>第十二章：Harness 全貌——四块拼图</h2>
+<p><img src="https://ronzl.github.io/harness-reading-notes/images/img_09.png" alt="" /></p>
 <h3>四块拼图</h3>
 <table>
 <thead>
