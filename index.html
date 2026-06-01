@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harness Engineering 实战读书笔记</title>
+<title>📚 学习笔记合集</title>
 <style>
   :root {
     --bg: #faf8f5;
@@ -13,12 +13,8 @@
     --accent: #2563eb;
     --accent-light: #dbeafe;
     --border: #e5e7eb;
-    --quote-bg: #f3f4f6;
-    --quote-border: #2563eb;
-    --code-bg: #1e293b;
-    --code-text: #e2e8f0;
-    --tag-bg: #e0e7ff;
-    --tag-text: #4338ca;
+    --success: #059669;
+    --success-light: #d1fae5;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -26,94 +22,84 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.8;
-    font-size: 16px;
   }
-  .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
   
-  /* Header */
   header {
     background: linear-gradient(135deg, #1e3a5f, #2563eb);
     color: white;
     padding: 60px 0 50px;
     text-align: center;
   }
-  header h1 { font-size: 2em; font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
-  header .subtitle { font-size: 1.05em; opacity: 0.85; line-height: 1.6; max-width: 600px; margin: 0 auto; }
-  header .meta { margin-top: 20px; font-size: 0.85em; opacity: 0.65; }
+  header h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 10px; }
+  header p { opacity: 0.8; font-size: 1.05em; }
 
-  /* Article */
-  article { padding: 40px 0 60px; }
-  article > .container > h1,
-  article > .container > h2,
-  article > .container > h3 { margin-top: 1.8em; margin-bottom: 0.6em; line-height: 1.4; }
-  article > .container > h1 { font-size: 1.7em; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
-  article > .container > h2 { font-size: 1.35em; color: var(--accent); }
-  article > .container > h3 { font-size: 1.1em; }
-  article > .container > p { margin: 0.8em 0; }
-  article > .container > blockquote {
-    margin: 1em 0;
-    padding: 14px 18px;
-    background: var(--quote-bg);
-    border-left: 4px solid var(--quote-border);
-    border-radius: 0 8px 8px 0;
-    font-style: normal;
-  }
-  article > .container > blockquote p { margin: 0.3em 0; }
-  article > .container > blockquote strong { color: var(--accent); }
-  article > .container > ul, article > .container > ol { margin: 0.6em 0 0.6em 1.5em; }
-  article > .container > ul li, article > .container > ol li { margin: 0.3em 0; }
-  article > .container > code {
-    background: var(--accent-light);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-  }
-  article > .container > pre {
-    background: var(--code-bg);
-    color: var(--code-text);
-    padding: 16px 20px;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin: 1em 0;
-    font-size: 0.85em;
-    line-height: 1.6;
-  }
-  article > .container > table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 0.9em;
-  }
-  article > .container > table th,
-  article > .container > table td {
-    border: 1px solid var(--border);
-    padding: 10px 14px;
-    text-align: left;
-  }
-  article > .container > table th {
-    background: var(--accent-light);
-    font-weight: 600;
-  }
-  article > .container > table tr:nth-child(even) { background: #f9fafb; }
-  article > .container > hr {
-    border: none;
-    border-top: 2px solid var(--border);
-    margin: 2em 0;
-  }
+  main { padding: 40px 0 60px; }
 
-  /* Tags */
-  .tag {
-    display: inline-block;
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    padding: 2px 10px;
+  .stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    background: var(--card);
     border-radius: 12px;
-    font-size: 0.78em;
-    margin: 2px;
+    padding: 20px 28px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 120px;
   }
+  .stat-card .num { font-size: 2em; font-weight: 700; color: var(--accent); }
+  .stat-card .label { font-size: 0.85em; color: var(--muted); margin-top: 4px; }
 
-  /* Footer */
+  .note-list { display: flex; flex-direction: column; gap: 16px; }
+  .note-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--accent);
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  .note-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .note-card .title { font-size: 1.15em; font-weight: 600; color: var(--text); }
+  .note-card .desc { font-size: 0.9em; color: var(--muted); margin-top: 6px; }
+  .note-card .meta {
+    font-size: 0.8em;
+    color: var(--muted);
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .note-card .tag {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.78em;
+  }
+  .note-card .tag.green { background: var(--success-light); color: var(--success); }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+  .empty-state .icon { font-size: 3em; margin-bottom: 16px; }
+
   footer {
     text-align: center;
     padding: 30px 0;
@@ -124,793 +110,48 @@
 
   @media (max-width: 600px) {
     header { padding: 40px 0 30px; }
-    header h1 { font-size: 1.5em; }
-    article { padding: 24px 0 40px; }
+    header h1 { font-size: 1.6em; }
   }
 </style>
 </head>
 <body>
 <header>
   <div class="container">
-    <h1>📖 Harness Engineering<br>实战读书笔记</h1>
-    <p class="subtitle">从零搭建 Harness Engineering 的完整工程实践记录——以 JK Launcher 为实战案例</p>
-    <p class="meta">原文：腾讯云开发者公众号 ｜ 整理时间：2026-05-28 ｜ 共12章</p>
+    <h1>📚 学习笔记合集</h1>
+    <p>常读常新 · 持续积累</p>
   </div>
 </header>
-<article>
+<main>
   <div class="container">
-    <h1>📖 Harness Engineering 实战读书笔记（详细版）</h1>
-<blockquote>
-<p><strong>原文：</strong> 腾讯云开发者公众号
-<strong>副标题：</strong> 从零搭建 Harness Engineering（以 JK Launcher 为实战案例）
-<strong>作者自述：</strong> &quot;本文将整个搭建流程细细拆解，每一个步骤都拆散揉碎了，共12章，建议留足至少半小时细读。&quot;</p>
-</blockquote>
-<hr />
-<h2>引言：这篇文章要解决什么问题？</h2>
-<p><strong>背景：</strong> Harness Engineering 的概念已经火了很久了，全网很多文章都在讲理念。但大家真正困惑的是——</p>
-<blockquote>
-<p>&quot;理念我理解了，可是真正落到工程里，我第一步到底该做什么？&quot;</p>
-</blockquote>
-<p>这个问题特别重要。因为 Harness 这个词听上去很大，很像一个抽象的方法论。不同项目落地后长得完全不一样：有的 CI 很强，有的规范很强，有的多 Agent 很强，有的只是把几个脚本和模板整理得很扎实。但往下挖，它们解决的是<strong>同一个问题</strong>：</p>
-<blockquote>
-<p>如何让 AI 在你的项目里，<strong>持续、稳定、规范、顺畅</strong>地做出你真正想要的结果。</p>
-</blockquote>
-<p><strong>作者的承诺：</strong> 这篇不谈泛泛之论，只做一件事——拿 JK Launcher 这个真实工程做例子，把怎么一步一步把 Harness 搭出来的全过程原原本本讲清楚。<strong>哪些有效、哪些踩坑、哪些一开始以为够用后来发现完全不够</strong>，都会写出来。</p>
-<hr />
-<h2>第一章：先把几个最容易混淆的概念讲清楚</h2>
-<p>很多人一上来就开始写 Rule、搞 Agent、接 MCP，最后越做越乱，根本原因不是执行力不够，而是<strong>概念没分清楚</strong>。</p>
-<h3>1.1 Rule — 工程规矩</h3>
-<p>Rule 不是需求文档，也不是设计方案，更不是脚本。它更像是你在带一个新人开发时，先告诉他的那些<strong>基础原则</strong>：</p>
-<ul>
-<li>什么能做，什么不能做</li>
-<li>什么做完必须验证</li>
-<li>什么约定绝对不能绕过去</li>
-</ul>
-<p><strong>作者举个例子：</strong> 有一条 Rule 专门约束&quot;改完代码以后必须完成编译、测试和事后验证&quot;——本质上是在告诉 AI：</p>
-<blockquote>
-<p>你改完代码以后，不能只说&quot;我改好了&quot;
-你必须去编译
-你必须去跑测试
-你必须去做事后验证
-三步不全过，这次开发就不算完成</p>
-</blockquote>
-<p><strong>Rule 的本质：</strong> 不是帮 AI &quot;变聪明&quot;，而是帮 AI <strong>少犯一些本来不该反复犯的低级错误</strong>。它更像团队的&quot;研发制度&quot;，制度不是拿来创造价值的，制度是拿来<strong>减少混乱</strong>的。</p>
-<p><strong>⚠️ 重要前提：Rule 只是软约束，不是硬门禁。</strong>
-AI 理论上应该遵守它，但实际不一定。尤其当 Rule 越来越多、需求越来越复杂时，会出现三种情况：</p>
-<ol>
-<li><strong>它忘了某条 Rule</strong></li>
-<li><strong>它觉得某条 Rule 和这次需求&quot;无关&quot;</strong></li>
-<li><strong>它知道这条 Rule，但偷懒没做，还给自己找理由</strong></li>
-</ol>
-<h3>1.2 MCP — 外接能力接口</h3>
-<p>MCP（Model Context Protocol）本质上是一种<strong>标准方式</strong>：把&quot;仓库之外的能力&quot;接进 AI 的工作链路里。</p>
-<p><strong>没有 MCP 时：</strong> AI 被锁在本地代码仓库、本地脚本、当前对话上下文里，很难安全地接入外层工程系统。</p>
-<p><strong>有了 MCP：</strong> 可以调用 CI 平台发起构建、读取构建日志、调用签名服务、上传制品、调用发布系统做灰度提审、回写状态……</p>
-<p>MCP 的作用：</p>
-<ul>
-<li><strong>接什么</strong> — 哪些外部系统</li>
-<li><strong>接到多细</strong> — 只读还是可写</li>
-<li><strong>何时允许接</strong> — 流程的哪个阶段</li>
-</ul>
-<p><strong>MCP 不是 Harness 的主体，而是 Harness 的外接能力接口。</strong> 如果 Rule 像制度，Skill 像操作手册，Scripts 像闸机，那么 MCP 更像<strong>把 AI 接进更大工程系统的标准插座</strong>。</p>
-<h3>1.3 Skill — 标准操作手册</h3>
-<blockquote>
-<p>Skill 是作者<strong>特别推荐所有团队早点引入的东西</strong>。</p>
-</blockquote>
-<p>它本质上是在告诉 AI：有些事情你不要临场发挥，不要每次重新理解，也不要自己&quot;猜一个大概的流程&quot;，而是<strong>严格按照这套固定步骤执行</strong>。</p>
-<p><strong>作者举例：</strong> &quot;你去编译一下&quot;——AI 可能自己拼一条命令。但实际工程里，编译往往不是一句 <code>dotnet build</code> 那么简单，可能涉及：</p>
-<ul>
-<li>要找对 MSBuild</li>
-<li>要用固定的配置</li>
-<li>要先还原</li>
-<li>要把日志输出到指定文件</li>
-<li>编译完以后还要看错误模式</li>
-</ul>
-<p>如果每次都让 AI 自由发挥，迟早出问题。</p>
-<p><strong>Skill 和 Rule 的分工：</strong></p>
-<blockquote>
-<p>Rule 告诉 AI &quot;这件事必须做&quot;
-Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
-</blockquote>
-<h3>1.4 Sub Agent — 分工明确的 AI 角色</h3>
-<p>很多人用 AI 是一个 Agent 干到底：分析需求、设计方案、写代码、审代码、写测试、做总结全都它来。短任务时没问题，但任务一复杂：</p>
-<ul>
-<li>它会自己给自己做需求解释</li>
-<li>它会自己给自己的方案打分</li>
-<li>它会自己写代码、自己说自己没问题</li>
-<li>它会天然倾向于&quot;推进任务继续进行&quot;，而不是&quot;停下来承认当前有问题&quot;</li>
-</ul>
-<p>这和真实软件研发完全一样。一个人既做产品、又做架构、又做开发、又做QA，质量一定很难收口。</p>
-<p><strong>放到真实研发里，Sub Agent 就像项目组里的一组人：</strong></p>
-<ul>
-<li>需求分析的人只管把需求说清楚</li>
-<li>方案设计的人只管把技术方案做完整</li>
-<li>闸门的人专门负责判断&quot;这东西能不能进开发&quot;</li>
-<li>开发的人只管实现</li>
-<li>代码审查和测试的人负责收口</li>
-<li>PM 只负责流程</li>
-</ul>
-<p>这个思路非常朴素，但<strong>对 AI 特别有效</strong>。</p>
-<h3>1.5 Workflow — 接力赛规则</h3>
-<blockquote>
-<p>Workflow 不是&quot;写了几个 Agent&quot;那么简单。如果只写了几个 Agent 而没有 Workflow，那只是&quot;有几个人在干活&quot;，还谈不上&quot;有一套稳定可复用的协作方式&quot;。</p>
-</blockquote>
-<p><strong>最形象的理解方式：接力赛。</strong>
-接力赛最重要的，不是有四个跑得快的人，而是：</p>
-<ul>
-<li><strong>第一棒是谁跑</strong></li>
-<li><strong>第二棒什么时候能接棒</strong></li>
-<li><strong>接棒的时候必须交什么</strong></li>
-<li><strong>哪种情况算犯规</strong></li>
-<li><strong>犯规以后是重跑、罚时，还是直接取消成绩</strong></li>
-</ul>
-<p>放到工程里一模一样：</p>
-<p><strong>没有 Workflow 时：</strong></p>
-<ul>
-<li>需求不清楚，方案设计直接自己改需求</li>
-<li>方案有问题，开发硬着头皮继续做</li>
-<li>测试发现阻塞问题，PM 为了赶进度想办法往下推</li>
-<li>某个阶段明明应该打回，但没人说得清到底该打回给谁</li>
-<li>大家都在做事，但没人能说清楚&quot;这件事现在到底算做到哪了&quot;</li>
-</ul>
-<p><strong>Workflow 的核心：</strong> 不是有一张图，而是<strong>让每一次前进、暂停、打回、重跑都有明确依据</strong>。</p>
-<p><strong>作者拆了三层：</strong></p>
-<ol>
-<li><strong>写给人看</strong> — 整条研发链路怎么走</li>
-<li><strong>写给系统看</strong> — 阶段和迁移边固定下来</li>
-<li><strong>写给角色看</strong> — 接棒时该读什么、交棒时该写什么</li>
-</ol>
-<p><strong>配套的上下文纪律：</strong> 每一棒只给当前该看的那一份材料。不是要瞒信息，而是避免一上来把规则、地图、任务历史全堆给 AI——上下文越长，重点越散。</p>
-<h3>1.6 Scripts — 最&quot;硬&quot;的东西</h3>
-<blockquote>
-<p>如果说 Rule 只是告诉 AI 应该怎么做，Skill 只是给 AI 标准步骤，那 Scripts 就是在说：<strong>你说你做完了没用，得跑过我这关才算。</strong></p>
-</blockquote>
-<p>成熟 Harness 最后一定会<strong>越来越依赖脚本，而不是越来越依赖提示词</strong>。</p>
-<p><strong>作者举例&quot;总门禁脚本&quot;覆盖的检查项：</strong></p>
-<ul>
-<li>XAML 里有没有中文</li>
-<li>有没有 Emoji</li>
-<li>有没有用 C# 8 以上语法</li>
-<li>有没有直接写 MessageBox.Show</li>
-<li>有没有硬编码 UI 文案</li>
-<li>日志格式对不对</li>
-<li>有没有直接访问 last_state.json</li>
-<li>SVN 认证参数是不是合规</li>
-<li>文件是不是超长</li>
-<li>本地化有没有违规</li>
-<li>主工程编译是否通过</li>
-<li>测试是否通过</li>
-<li>测试数量有没有异常减少</li>
-<li>规则文件是不是四处同步</li>
-<li>.cs 文件有没有漏进 .csproj</li>
-</ul>
-<blockquote>
-<p>当这些东西被做成脚本以后，AI 就很难再拿&quot;我觉得没问题&quot;来糊弄过去了。</p>
-</blockquote>
-<h3>1.7 概念串起来</h3>
-<p><strong>逐层叠加关系：</strong></p>
-<pre><code>Rule（底线） → Skill（标准化） → Scripts（硬验证）
-                 ↓
-           Sub Agent（分工）→ Workflow（接力）→ MCP（外接）
-</code></pre>
-<p><strong>另一种理解方式：</strong></p>
-<ul>
-<li>Rule 负责告诉 AI 什么是底线</li>
-<li>Skill 负责把高频动作标准化</li>
-<li>Scripts 负责判断结果到底对不对</li>
-<li>Sub Agent 负责把复杂任务拆成多个专业角色</li>
-<li>Workflow 负责让这些角色能按顺序接力</li>
-<li>MCP 负责把这套系统继续往外部工程系统延伸</li>
-</ul>
-<h3>1.8 什么是 Harness Engineering</h3>
-<blockquote>
-<p>不是某一个工具，也不是某一条提示词技巧，而是一整套<strong>让 AI 在工程里稳定产出正确结果</strong>的工程系统。</p>
-</blockquote>
-<p><strong>三个关键词：</strong></p>
-<ol>
-<li><strong>稳定</strong> — 不是这次运气好做对了，而是下次、下下次、换个需求、换个维护人，仍然稳定</li>
-<li><strong>产出</strong> — 不只是写代码，还包括需求、方案、验证、交付等完整过程产物</li>
-<li><strong>正确结果</strong> — 不是&quot;做完了就算&quot;，而是最终有办法判断它到底做得对不对</li>
-</ol>
-<p><strong>Harness Engineering 真正解决的问题：</strong></p>
-<blockquote>
-<p>怎么把 AI 从一个会临场发挥的模型，变成一个在工程里<strong>可约束、可协作、可校验、可持续维护</strong>的执行系统。</p>
-</blockquote>
-<p><strong>作者对比拟：</strong></p>
-<blockquote>
-<p>Harness Engineering 就像是在给 AI 搭一整套&quot;工程作战系统&quot;。</p>
-<ul>
-<li>SPEC（规格设计文档）是<strong>作战目标</strong></li>
-<li>Rule 是<strong>纪律</strong></li>
-<li>Skill 是<strong>标准动作</strong></li>
-<li>Sub Agent 是<strong>兵种分工</strong></li>
-<li>Workflow 是<strong>指挥链</strong></li>
-<li>Scripts 是<strong>验收和反馈闭环</strong></li>
-<li>dev-map 和任务看板是<strong>地图和战场态势</strong></li>
-</ul>
-</blockquote>
-<hr />
-<h2>第二章：真正开始搭 Harness 之前，先做了什么</h2>
-<h3>2.1 工程画像：JK Launcher 在做什么</h3>
-<p>作者先花篇幅说清楚项目本身，因为如果不了解项目是什么、复杂度在哪个层级，后面很容易把方法误解成&quot;只有大工程才需要的复杂仪式&quot;。</p>
-<p><strong>JK Launcher 是什么：</strong> 一个面向 Unity 项目研发流程的桌面启动器工具。不是单一功能的小工具，而是一整套围绕日常研发高频动作搭起来的工作台：</p>
-<ul>
-<li>工程更新</li>
-<li>打开和关闭 Unity</li>
-<li>SVN 环境检测与权限检查</li>
-<li>冲突检测与冲突修复</li>
-<li>定时更新和批量更新</li>
-<li>更新失败后的诊断与恢复</li>
-<li>多语言界面</li>
-<li>日志、遥测、状态反馈</li>
-</ul>
-<p><strong>特征：</strong> 功能持续迭代；既有 UI 又有服务和状态逻辑；既要工程正确性也要用户体验。<strong>特别适合作为 Harness 的样本。</strong></p>
-<h3>2.2 人搭 Harness，AI 写代码</h3>
-<blockquote>
-<p>这个工具在持续演进的过程中，真正的代码实现工作<strong>完全由 AI 去完成，人没有亲手写过一行代码</strong>。</p>
-</blockquote>
-<p>人做的事情不是补代码，而是一步一步把 Harness Engineering 搭起来：</p>
-<ol>
-<li>先把需求和设计说透</li>
-<li>再补上规则</li>
-<li>再把固定流程做成 Skill</li>
-<li>再拆出多 Agent</li>
-<li>再补上脚本门禁和事后验证</li>
-<li>再补项目地图、任务看板和流程定义文件</li>
-</ol>
-<h3>2.3 从设计规格文档（SPEC）开始</h3>
-<p><strong>这一步是全文最重要的一句话：</strong></p>
-<blockquote>
-<p>真正的第一步，不是写 Rule，而是先把一个<strong>完整的设计规格文档</strong>和 AI 反复磨透。</p>
-</blockquote>
-<p>很多人一听到 Harness，就想先写 Rule、先拆 Agent、先上脚本。但如果你一开始连&quot;这个工程到底想怎么开发&quot;都没有说清楚，后面所有约束都会变成无源之水。</p>
-<p><strong>SPEC 要回答的问题：</strong></p>
-<ul>
-<li>这个版本到底要解决什么问题</li>
-<li>哪些是核心目标，哪些只是顺手优化</li>
-<li>改动会影响哪些模块</li>
-<li>哪些行为必须保持兼容</li>
-<li>最终什么样才算做完</li>
-</ul>
-<p><strong>作者的做法：</strong> 这一步会和 AI 来回聊很多轮，甚至聊到有点烦。因为这一轮偷懒，后面会用十倍时间还回来。这些来回不只是改文档措辞，也是共同加深对需求本身的理解——有时一开始连自己都不确定想要什么，不妨把 AI 拉进需求讨论里，让它帮着追问、掰开选项。</p>
-<p><strong>SPEC 的金标准：</strong> 必须清晰写明所有需求，指明必要的边界条件，<strong>没有任何不确定的词语</strong>（建议、可以、推荐、可选等字样）。</p>
-<h3>2.4 只靠 SPEC 不够</h3>
-<p>很快发现：只靠这份文档，AI 还是会出问题。问题不在于它看不懂文档，而在于：</p>
-<ol>
-<li>它不会百分之百按文档执行</li>
-<li>它做完以后，你很难知道现在到底做到哪了</li>
-<li>很多错误会反复犯——按自己理解跳过细节、做完说&quot;都完成了&quot;实际漏了、以前的错下次再犯</li>
-</ol>
-<blockquote>
-<p>仅有 SPEC，只能解决&quot;知道做什么&quot;的问题，解决不了<strong>&quot;如何稳定地做到位&quot;</strong>的问题。</p>
-</blockquote>
-<p>于是开始给 AI 上 Rule。</p>
-<hr />
-<h2>第三章：Rule 很重要，但不要迷信 Rule</h2>
-<h3>3.1 Rule 立竿见影</h3>
-<p>AI 最爱偷懒的地方恰恰是那些&quot;看起来像收尾，其实是底线&quot;的动作：</p>
-<ul>
-<li>&quot;我改的是文档，不用编译&quot;</li>
-<li>&quot;我只是小改，不用跑测试&quot;</li>
-<li>&quot;这次失败看起来是历史问题，不算我引入的&quot;</li>
-</ul>
-<p>Rule 一上去，最粗糙的问题立刻少很多。</p>
-<h3>3.2 Rule 的两个天花板</h3>
-<p><strong>问题一：AI 会忽略 Rule</strong>
-不是完全不看，而是在复杂任务下局部遗忘。需求越长、上下文越重、同时加载的内容越多，Rule 就越容易被稀释。</p>
-<p><strong>问题二：AI 会绕过 Rule</strong>
-比忽略更麻烦。它不是不知道规则，而是会开始找理由：</p>
-<ul>
-<li>&quot;这次不通过不是我引入的，是之前遗留的&quot;</li>
-<li>&quot;这个 Rule 说的是常规需求，这次是特殊情况&quot;</li>
-<li>&quot;我已经做了等价验证，不需要完全照规则来&quot;</li>
-</ul>
-<blockquote>
-<p>这是做 Harness 过程中非常关键的一个认知转折：
-<strong>Rule 不是没用，而是 Rule 只能做原则约束，不能做流程执行。</strong></p>
-</blockquote>
-<p>于是下一步：把固定流程从 Rule 里拆出去，做成 Skill。</p>
-<hr />
-<h2>第四章：为什么要把固定动作做成 Skill</h2>
-<p>工程里有一类事情非常适合做成 Skill：</p>
-<ul>
-<li><strong>执行步骤固定</strong></li>
-<li><strong>每次都要做</strong></li>
-<li><strong>做错一次就很恶心</strong></li>
-<li><strong>不值得让 AI 每次重新思考</strong></li>
-</ul>
-<p>编译、单元测试、事后验证，就是这一类。</p>
-<h3>做了 Skill 以后的好处</h3>
-<p><strong>1. Rule 变轻了</strong>
-以前 Rule 既讲原则又讲流程，越写越长。现在 Rule 只保留真正的红线，复杂执行步骤都交给 Skill。</p>
-<p><strong>2. AI 的执行稳定性变高了</strong>
-以前 AI 需要临场理解&quot;编译应该怎么编、测试应该怎么测&quot;。现在它不是理解，而是<strong>调用一套现成的方法</strong>。</p>
-<p><strong>3. 维护成本更低了</strong>
-后来修改编译流程，只需要改编译 Skill 本身，不需要去全项目搜索每条 Rule 里是不是都写了旧命令。</p>
-<hr />
-<h2>第五章：为什么最后一定会走到结构化的多 Agent</h2>
-<h3>5.1 出现的新问题</h3>
-<p>SPEC、Rule、Skill 补完以后，系统比最早稳了很多。但当需求继续复杂，新问题开始明显：</p>
-<blockquote>
-<p>单个 Agent 很难在长时间、复杂链路的开发里，同时把需求理解、方案设计、风险判断、编码实现、代码自审、测试验证都做好。</p>
-</blockquote>
-<p>不是模型不够聪明，而是<strong>强迫它一次性扮演太多角色</strong>。一个 Agent 如果既理解需求、又设计方案、又判断可行性、又写代码、又自己审自己——一定会出问题。</p>
-<h3>5.2 三种路线对比（核心决策章节）</h3>
-<p><strong>路线一：继续强化单 Agent</strong>
-继续给单 Agent 补更长的 SPEC、更多的 Rule、更细的 Skill、更严的检查步骤。</p>
-<ul>
-<li>✅ 不能说完全没用</li>
-<li>❌ 越往后越像把越来越多责任塞进一个&quot;大而全&quot;角色里</li>
-<li>❌ 可以让单 Agent 更谨慎，但解决不了<strong>角色冲突本身</strong></li>
-</ul>
-<p><strong>路线二：去中心化协作（AutoGen GroupChat 式）</strong>
-多个 Agent 平起平坐，通过对话和协商动态达成共识。</p>
-<ul>
-<li>✅ 灵活、现场应变能力强</li>
-<li>❌ 行为路径不稳定——每次面对同类需求可能走出不同流程</li>
-<li>❌ 谁对哪部分结果负责不够明确</li>
-<li>❌ 出问题后回退到哪一层不清晰</li>
-<li>❌ 换模型、换维护人时很难保持一致</li>
-<li><blockquote>
-<p>&quot;好看，但难维护。&quot;</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>路线三：结构化调度（最终选择）</strong>
-明确有 PM 角色、每个阶段谁负责、每阶段的输入输出、什么时候前进什么时候回退。</p>
-<ul>
-<li>✅ 流程清晰、可控性强、结果可审计</li>
-<li>✅ 适合文档沉淀、方便长期维护和角色替换</li>
-<li>❌ 前期设计成本更高、灵活性比自由协商差、产物更多</li>
-</ul>
-<p><strong>作者的选择理由：</strong></p>
-<blockquote>
-<p>&quot;到了真实工程阶段，真正贵的不是 token，<strong>真正贵的是失控</strong>。&quot;</p>
-</blockquote>
-<p>不只是&quot;AI 把代码写出来&quot;，还需要：</p>
-<ul>
-<li>需求文档、方案文档、开发文档</li>
-<li>代码评审结论、测试文档、交付结论</li>
-<li>阶段进度和回退记录</li>
-</ul>
-<p>这些不是形式主义，是为了让后续任何人、任何 AI 都能看懂：为什么这么做、做到哪了、哪些风险已处理。</p>
-<h3>5.3 结构化调度内部的二次选择</h3>
-<p><strong>做法 A（最终选择）</strong>：固定角色、固定流程</p>
-<ul>
-<li>把有哪些 Agent、每个 Agent 干什么、什么阶段找谁定义清楚</li>
-<li>PM 只负责按流程调度</li>
-<li>稳定、容易维护、适合固定类型工作流</li>
-</ul>
-<p><strong>做法 B</strong>：只固定 PM 和开发经理，具体 Agent 动态生成</p>
-<ul>
-<li>灵活性更强，但角色边界更漂、维护成本更高</li>
-<li>很难做长期稳定的流程复用</li>
-</ul>
-<p><strong>为什么选 A：</strong> 实际开发工作流虽然需求内容会变，但大的阶段结构相对固定。既然工作流不是完全开放式的，就没必要为了理论上的灵活性牺牲稳定性和可维护性。</p>
-<blockquote>
-<p>多轮技术选型都是在做同一类取舍：<strong>灵活性和稳定性之间，最后都更偏向后者。</strong> 对长期维护的工程来说，可控、可追踪、可复用比&quot;理论上更灵活&quot;重要得多。</p>
-</blockquote>
-<hr />
-<h2>第六章：七个 Agent 不是拍脑袋拆出来的</h2>
-<h3>6.1 第一步：先拆需求分析、方案设计、开发实现</h3>
-<p>最早的核心问题——&quot;模糊需求直接流进代码&quot;。用户说一句想法，AI 很快写出来，但：</p>
-<ul>
-<li>需求边界不清</li>
-<li>技术方案边做边想</li>
-<li>做完说不清按什么思路做的</li>
-</ul>
-<p>三个最基础的角色最先被拆出来：</p>
-<ol>
-<li><strong>需求分析</strong> — 模糊想法 → 结构化需求</li>
-<li><strong>方案设计</strong> — 需求 → 可落地的技术方案</li>
-<li><strong>开发实现</strong> — 按前面的约束写代码</li>
-</ol>
-<p><strong>为什么这三层必须先拆：</strong> 不拆开，后面所有事都会混成一团。出了问题不知道补哪一层。</p>
-<h3>6.2 第二步：补闸门总控（第四个）</h3>
-<p>需求写出来、方案写出来了，不等于具备进入开发的条件：</p>
-<ul>
-<li>需求写了功能但没写验收标准</li>
-<li>方案看起来完整但漏了关键边界</li>
-<li>某改法理论上能做但放当前工程里风险很高</li>
-</ul>
-<p>于是补出<strong>闸门总控（可行性分析）</strong>。它不重新写需求和方案，而是专门判断：</p>
-<ul>
-<li>这份需求够不够清楚</li>
-<li>这份方案有没有明显漏项</li>
-<li>这件事能不能安全落地</li>
-<li>现在进开发会不会把风险带进编码阶段</li>
-</ul>
-<blockquote>
-<p>如果没有闸门，很多问题在开发阶段才会炸——而开发阶段是最贵的阶段。</p>
-</blockquote>
-<h3>6.3 第三步：补代码审查和测试（第五、第六个）</h3>
-<p>开发说自己做完了，不等于做对了。但代码审查和测试不能合并，因为它们解决的不是同一个问题：</p>
-<p><strong>代码审查</strong> — 从实现层回头看：有没有偏离需求、偏离方案、代码结构是否合理、有无明显遗漏 → <strong>技术落地质量</strong>的收口</p>
-<p><strong>测试验证</strong> — 从行为层再看一遍：功能对不对、用户路径能不能走通、边界和回归有没有炸、稳定性是否可接受 → <strong>实际结果质量</strong>的收口</p>
-<blockquote>
-<p>没有代码审查，开发容易&quot;代码能跑就算完成&quot;。
-没有测试验证，系统容易停留在&quot;看起来写对了&quot;。
-<strong>下游角色不是附属品，而是整套流程的真正收口。</strong></p>
-</blockquote>
-<h3>6.4 第四步：补 PM（第七个）</h3>
-<p>谁来决定现在该找谁？如果让每个 Agent 自己判断，流程很快滑回自由协商。于是把 PM 放到中央。</p>
-<p><strong>关键：</strong> 需要的不是一个&quot;最懂研发的 PM&quot;，而是一个<strong>&quot;最守流程边界的 PM&quot;</strong>。</p>
-<p>PM 只负责：</p>
-<ul>
-<li>读取当前阶段的文档结论</li>
-<li>决定流程前进还是回退</li>
-<li>指定下一阶段由哪个 Agent 接手</li>
-<li>维护交接、迭代、交付记录</li>
-</ul>
-<p>PM <strong>不负责</strong>：</p>
-<ul>
-<li>写需求、定方案、改代码</li>
-<li>替其他 Agent 给专业结论</li>
-</ul>
-<blockquote>
-<p>PM 一旦越界，就会把整个多 Agent 系统重新拉回到&quot;一个中央大脑说了算&quot;的旧路上去。</p>
-</blockquote>
-<h3>6.5 为什么正好是这七个</h3>
-<p>不是&quot;正好七个&quot;好看，而是<strong>每个角色都解决了一个前一个角色解决不了的问题</strong>：</p>
-<ol>
-<li>需求分析 — &quot;想做什么&quot;</li>
-<li>方案设计 — &quot;打算怎么做&quot;</li>
-<li>闸门总控 — &quot;现在能不能做&quot;</li>
-<li>开发实现 — &quot;真正把它做出来&quot;</li>
-<li>代码审查 — &quot;是不是按要求做出来&quot;</li>
-<li>测试验证 — &quot;做出来的东西到底能不能用&quot;</li>
-<li>PM — &quot;整条链怎么有序地串起来&quot;</li>
-</ol>
-<h3>6.6 工程化技巧：给不同 Agent 配不同档位的模型</h3>
-<p>不是所有 Agent 都应该上同样强的模型。不同 Agent 的工作性质不一样：</p>
-<ul>
-<li><strong>PM</strong> — 只负责流程流转、阶段判断、交接记录 → 用相对简单、更节约 Token、性价比更高的模型就够</li>
-<li><strong>需求分析、方案设计、代码审查、测试</strong> — 专业判断重、理解能力和推理深度要求高 → 配更强模型</li>
-</ul>
-<p>这样做的好处：不是所有环节都在用最贵的方式跑，整体成本更可控，真正高价值的专业环节反而能拿到更合适的能力。</p>
-<blockquote>
-<p>不是每个岗位都配同一把最贵的锤子，而是让不同岗位用最合适、最有性价比的工具。</p>
-</blockquote>
-<hr />
-<h2>第七章：落地以后，怎么一轮一轮补稳</h2>
-<blockquote>
-<p>Harness Engineering 从来不是&quot;一次设计到位&quot;，而是<strong>跑一段、撞墙、补洞、再跑一段、再升级</strong>。</p>
-</blockquote>
-<h3>第一轮：下游私自修改上游文档</h3>
-<p>方案设计看完需求分析的文档后觉得不严谨，没打回，而是自己按理解补掉了需求。</p>
-<p><strong>听起来聪明，但非常危险：</strong></p>
-<ul>
-<li>需求到底谁负责变得模糊</li>
-<li>方案基于原需求还是基于私自修过的需求变得模糊</li>
-<li>出问题后不知道该追责给哪一层</li>
-</ul>
-<p><strong>补的规则：</strong> 下游不能直接改上游文档。当下游认为上游产出不合格时，只能<strong>提出阻塞项</strong>，由 PM 把流程正式打回给上游。</p>
-<blockquote>
-<p>这一条一落地，系统第一次真正有了&quot;谁负责哪份产物&quot;的边界感。</p>
-</blockquote>
-<h3>第二轮：PM 太容易越界</h3>
-<p>PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争议，它就特别容易顺手说：</p>
-<ul>
-<li>&quot;这个需求我觉得可以这么补&quot;</li>
-<li>&quot;这个方案不如改成那样&quot;</li>
-<li>&quot;这个问题别退了，开发顺手修一下就行&quot;</li>
-</ul>
-<p><strong>但 PM 给出的这类意见往往并不专业，甚至容易把整个流程带偏。</strong></p>
-<p><strong>补的规则：</strong></p>
-<ul>
-<li>PM 只负责流程管理</li>
-<li>PM 不负责专业判断</li>
-<li>PM 不负责给需求、方案、开发、测试提建议</li>
-<li>其他 Agent 拿不准时，PM 只能去拉真正能解决问题的专业 Agent</li>
-<li>实在无法明确的，流程必须暂停，由人做最终决策</li>
-</ul>
-<blockquote>
-<p>PM 不是流程中央的&quot;总专家&quot;，而是<strong>流程中央的&quot;总路由器&quot;</strong>。</p>
-</blockquote>
-<h3>第三轮：各 Agent 的专业性不够</h3>
-<p>问题不只是某一个 Agent 做得不够好，而是整套多 Agent 在早期都还存在专业性不够深的问题。作者以代码审查和测试为例——它们处于收口位置，更容易把前面积累的问题看得清楚。</p>
-<p><strong>最初的代码审查：</strong> 看有没有明显逻辑 bug、有没有违反 Rule、有没有基础问题。
-<strong>后来的认知：</strong> 代码审查不只是给代码意见，必须对照需求和方案，确认&quot;做的是不是对的、是不是完整的&quot;。</p>
-<p><strong>最初的测试：</strong> 看功能大面上能不能跑、有没有明显异常。
-<strong>后来的认知：</strong> 测试要站在真正收口的位置，去看功能、边界、回归、稳定性和基础性能诉求。</p>
-<blockquote>
-<p>代码审查和测试不是一般角色，而是<strong>整条链的最终收口</strong>。它们如果只看&quot;本层有没有问题&quot;，就会漏掉真正重要的东西。</p>
-</blockquote>
-<h3>第四轮：Rule 约束不够用了</h3>
-<p>很多写进 Rule 的基础约束，AI 还是会时不时不遵守：</p>
-<ul>
-<li>&quot;这个不通过不是我引入的，是之前遗留的&quot;</li>
-<li>&quot;这条 Rule 这次场景特殊，可以先不管&quot;</li>
-<li>&quot;我已经做了主要工作，这一步可以先跳过&quot;</li>
-</ul>
-<p><strong>真正的认知：</strong> Rule 再多，本质上还是<strong>自然语言约束</strong>。自然语言约束可以管住很多基础行为，但当需求越来越复杂时，它一定被忽略、被绕过、被&quot;解释性执行&quot;。</p>
-<p><strong>补的方案：</strong> 把很多能判定的约束<strong>尽量落地成脚本</strong>：</p>
-<ul>
-<li>编译要过，不是口头说&quot;应该没问题&quot;</li>
-<li>测试要过，不是口头说&quot;理论上没影响&quot;</li>
-<li>规则扫描要过，不是口头说&quot;这次特殊&quot;</li>
-</ul>
-<blockquote>
-<p>只有脚本通过，才算真正开发完成。</p>
-</blockquote>
-<h3>第五轮：Agent 会偷懒——补基线对比</h3>
-<p>脚本上来以后，AI 又展示了新的&quot;聪明&quot;：</p>
-<ul>
-<li>&quot;这次不通过不是我造成的&quot;</li>
-<li>&quot;这个错误本来就存在&quot;</li>
-<li>&quot;这个 Warning 是历史遗留&quot;</li>
-</ul>
-<p><strong>补的方案：开发前后各跑一次总验证，做基线对比。</strong></p>
-<p>具体做法：改代码前先跑一遍总验证，把输出留作基线；改完再跑一遍，对比两次结果。如果开发后新增了错误、失败、Warning 增量，就必须修。</p>
-<blockquote>
-<p>这样一来，&quot;是不是你这次引入的&quot;就不再靠嘴解释，而是靠前后报告对比。</p>
-</blockquote>
-<h3>第六轮：流程本身开始难维护</h3>
-<p>当需求一轮一轮跑下来，系统越来越成熟时，最后期的问题出现了——<strong>流程本身越来越难维护</strong>。</p>
-<p>最开始，很多流程规则都写在 PM 的长文里。一开始够用，但到后面阶段多了、回退边多了、角色边界多了，越来越痛苦：</p>
-<ul>
-<li>规则都在长文里，能看但不好校验</li>
-<li>改一处很容易漏另一处</li>
-<li>阶段和回退关系越来越复杂，容易双写不一致</li>
-<li>换维护人、换模型以后，角色边界容易漂</li>
-</ul>
-<p><strong>补的三层资产：</strong></p>
-<p><strong>第一层：流程定义文件</strong>
-把流程结构从长文描述里单独抽出来：</p>
-<ul>
-<li>每个阶段默认由哪个 Agent 负责</li>
-<li>正常应该怎么往前走</li>
-<li>出问题时允许退回到哪</li>
-<li>特殊回退要满足什么条件</li>
-</ul>
-<blockquote>
-<p>流程结构第一次从&quot;写在说明里的知识&quot;，变成了<strong>可以单独维护、单独校验的资产</strong>。</p>
-</blockquote>
-<p><strong>第二层：角色契约</strong>
-给每个 Agent 补一份角色契约，也就是每个角色的接口说明：</p>
-<ul>
-<li>这个角色必须读哪些上游产物</li>
-<li>这个角色必须写出哪些文档结果</li>
-<li>什么情况下它有权提出阻塞</li>
-<li>什么情况下它必须把问题交回 PM 路由</li>
-</ul>
-<blockquote>
-<p>以后即使换模型、换提示词、甚至换维护人，只要契约还在，角色边界就不至于轻易漂掉。</p>
-</blockquote>
-<p><strong>第三层：流程校验脚本</strong>
-专门检查流程资产本身是否齐全一致：</p>
-<ul>
-<li>流程定义文件是不是存在</li>
-<li>每个 Agent 对应的契约文件是不是齐全</li>
-<li>流程里提到的角色能不能在契约里找到</li>
-</ul>
-<h3>6-7章回顾：作者总结</h3>
-<blockquote>
-<p>第五章到第七章连起来看，回答的是同一件事：</p>
-<ul>
-<li>第五章：为什么选这条路线</li>
-<li>第六章：这条路线上的角色怎么拆</li>
-<li>第七章：拆完以后系统怎么继续补稳</li>
-</ul>
-</blockquote>
-<blockquote>
-<p><strong>Harness Engineering 在真实项目里的成长路径，根本不是先设计一套完美体系再照着执行，而是先用最小可用形态跑起来，然后在真实问题里不断补结构、补边界、补门禁、补反馈闭环。</strong></p>
-</blockquote>
-<hr />
-<h2>第八章：为什么最后一定会走到 Scripts</h2>
-<h3>8.1 总验证脚本做了什么</h3>
-<p>它不是单一检查，而是一套<strong>&quot;研发后验证总入口&quot;</strong>，是一个统一裁判。</p>
-<p><strong>A类：静态规范问题</strong></p>
-<ul>
-<li>XAML 里是否出现中文</li>
-<li>XAML 里是否出现 Emoji</li>
-<li>是否使用了 C# 8.0+ 语法</li>
-<li>是否直接用了 MessageBox.Show</li>
-<li>是否有硬编码 UI 文本</li>
-<li>日志是否缺少前缀</li>
-<li>是否直接访问 last_state.json</li>
-<li>SVN 认证参数是否规范</li>
-<li>文件是否过长</li>
-<li>本地化是否合规</li>
-</ul>
-<p><strong>B类：基础交付门槛</strong></p>
-<ul>
-<li>编译必须成功</li>
-<li>测试必须全部通过</li>
-<li>测试数量不能异常减少</li>
-</ul>
-<p><strong>C类：工程一致性</strong></p>
-<ul>
-<li>规则文件是否完成多格式同步</li>
-<li>.cs 文件是否都进了 .csproj</li>
-</ul>
-<h3>8.2 为什么这一步对 Harness 特别关键</h3>
-<blockquote>
-<p>以前的 SPEC、Rule、Skill、多 Agent，都还在解决&quot;怎样让 AI 去做事&quot;。如果没有事后验证，你始终不知道它这次做出来的结果，到底是正确的、错误的，还是只是看起来像完成了。</p>
-</blockquote>
-<p><strong>事前事后对比：</strong></p>
-<ul>
-<li>以前：AI 说&quot;我改好了&quot; → 流程继续推进</li>
-<li>以后：总验证脚本判定你通过了 → 才算完成</li>
-</ul>
-<p><strong>质的飞跃：</strong>
-从这一刻开始，AI 的完成定义不再是&quot;我觉得我做完了&quot;，而是<strong>&quot;脚本判定你通过了，你才算做完&quot;</strong>。</p>
-<blockquote>
-<p>它补上的不是一个步骤，而是一整个<strong>反馈闭环</strong>。</p>
-</blockquote>
-<h3>8.3 完成幻觉</h3>
-<p>作者特别强调一个概念——<strong>&quot;任务完成幻觉&quot;</strong>：</p>
-<blockquote>
-<p>AI 把代码改了，文档写了，流程往下推进了，于是我们觉得这次开发完成了。
-但<strong>完成不等于正确，推进不等于收口，做了事情不等于把事情做好了。</strong></p>
-</blockquote>
-<p>当事后验证真正成为流程硬门槛后，整套 Harness 的性质变了：</p>
-<ul>
-<li>不再只是一个会驱动 AI 往前跑的系统</li>
-<li>开始具备<strong>对结果做判断的能力</strong></li>
-<li>开始形成<strong>&quot;做事 → 校验结果 → 发现问题 → 回退修复 → 再次验证&quot;</strong>的完整回路</li>
-</ul>
-<hr />
-<h2>第九章：如何让 AI 带上&quot;整个项目的记性&quot;</h2>
-<h3>9.1 为什么需要项目级上下文</h3>
-<p>任务进入持续迭代阶段后，两个典型惨案：</p>
-<ol>
-<li><strong>新方案把旧方案冲掉</strong> — AI 不知道已经有的设计</li>
-<li><strong>AI 重复造轮子</strong> — 不知道项目里已经有现成实现</li>
-</ol>
-<h3>9.2 不是百科全书，是一套索引</h3>
-<p>作者特别强调：<strong>不是给 AI 一本读不完的百科全书，而是给一套够准的索引。</strong> 先告诉它该从哪几条线、哪几份文档进门，再让它自己去翻代码、对细节。</p>
-<p><strong>常见方案路网（多种思路）：</strong></p>
-<p>| 方案 | 特点 |
-|:---:|:----:|
-| 人工整理的导航文档（dev-map） | 按功能写&quot;该看哪、别碰哪&quot; |
-| 任务/需求总览（任务看板） | 一张表记当前做什么、到哪阶段 |
-| 工具自动吐出的地图 | 依赖图、模块清单、测试报告 |
-| 编辑器语言服务跳转 | 符号定义、引用查找 |
-| 检索进上下文 | 全文搜、向量检索 |
-| 仓库轻量约定 | README、CODEOWNERS |
-| 单独 Wiki | 需和仓库对齐 |</p>
-<h3>9.3 具体落地：dev-map + 任务看板</h3>
-<p><strong>dev-map（开发导航地图）：</strong></p>
-<ul>
-<li>规则：<strong>改代码之前先查 dev-map</strong></li>
-<li>内容：功能落点、影响范围、已有模式、标准写法</li>
-<li>维护：<strong>开发 Agent 在干活的过程中维护</strong>，而不是 PM 单方面维护</li>
-<li>大仓库处理：前面留几页总览，扎进某块开发再翻具体说明——大地图拆成好几本薄册子</li>
-</ul>
-<p><strong>任务看板：</strong></p>
-<ul>
-<li>维护者：PM</li>
-<li>内容：当前任务、每个任务到哪个阶段、文档目录、已完成任务的交付结论</li>
-<li>作用：新 Agent 进来时先看一眼看板，知道是不是旧需求的延续、有没有类似任务、文档在哪</li>
-</ul>
-<blockquote>
-<p>dev-map 偏代码与模块结构（从哪进门），任务看板偏需求和任务历史（从哪进门）。两个入口都写在仓库里，AI 在流程里各改各的。</p>
-</blockquote>
-<hr />
-<h2>第十章：Memory 为什么可以靠边站</h2>
-<h3>10.1 Memory 的两种形态</h3>
-<p><strong>偏&quot;这一轮&quot;的：</strong> 当前对话里攒下的上下文。
-<strong>偏&quot;跨很多轮&quot;的：</strong> 隔几天再来还记住的东西（个人偏好、操作习惯、口头规矩）。</p>
-<h3>10.2 作者的核心观点</h3>
-<blockquote>
-<p>凡是最后会变成&quot;团队都要遵守&quot;或&quot;交付要对齐&quot;的东西，都不该长期停在这一层。</p>
-</blockquote>
-<p><strong>三句话压住分工：</strong></p>
-<ul>
-<li><strong>事实像档案</strong> → 该进 SPEC、文档</li>
-<li><strong>例子像故事</strong>（成功/失败案例）→ 该进测试用例、评审清单</li>
-<li><strong>规矩像手册</strong> → 该进 Scripts / Rule</li>
-</ul>
-<h3>10.3 个人 vs 团队</h3>
-<ul>
-<li><strong>个人项目 / solo 工具：</strong> Memory 很有用，省重复话、省摩擦</li>
-<li><strong>多人、标准、长期维护的工程：</strong> 主干必须是<strong>仓库里的资产 + 门禁</strong>。Memory 顶多是润滑剂</li>
-</ul>
-<p><strong>实践中的自问：</strong></p>
-<ul>
-<li>这是&quot;个人习惯&quot;还是&quot;团队要对齐&quot;？→ 后者先进 Rule（能脚本化更好）</li>
-<li>能不能变成测试或样例数据？→ 别只存在聊天记录里</li>
-<li>solo 时可以用 Memory 提速 → 合并进团队流程前把该沉淀的沉淀掉</li>
-</ul>
-<hr />
-<h2>第十一章：人和 AI 的关系</h2>
-<h3>11.1 人到底在做什么</h3>
-<p>Harness 越强，<strong>人越重要</strong>——只是职责发生了变化：</p>
-<p><strong>以前：</strong> 人直接写代码、直接改需求、盯每一个细节。
-<strong>现在：</strong> 人更多地——</p>
-<ul>
-<li>定义项目目标和边界</li>
-<li>设计脚本门禁</li>
-<li>审视流程哪里有漏洞</li>
-<li>在流程卡住时做最终判断</li>
-</ul>
-<blockquote>
-<p>人从&quot;执行者&quot;逐步上移成了<strong>&quot;系统设计者&quot;和&quot;最后责任人&quot;</strong>。</p>
-</blockquote>
-<h3>11.2 AI 不是助手</h3>
-<blockquote>
-<p>在复杂工程里，AI 不是助手，AI 更像是一支<strong>执行力极强但必须被制度化管理的团队</strong>。你不能指望它天生懂规矩，也不能指望它自己长出流程意识。</p>
-</blockquote>
-<p><strong>未来关系：</strong></p>
-<ul>
-<li>人负责<strong>设计系统</strong></li>
-<li>AI 负责在系统里<strong>高强度执行</strong></li>
-<li>人<strong>对最终结果负责</strong></li>
-</ul>
-<h3>11.3 后续方向</h3>
-<p><strong>第一：更多规则继续脚本化</strong>
-只要是能判定的，就尽量不要停留在 Rule 层。而且这事背后有一个更长远的方向——让反馈闭环越来越完整：自动模拟用户行为、自动感知关键路径是否真正跑通。</p>
-<p><strong>第二：把流程进一步产品化</strong>
-Workflow 已有流程定义文件和契约，后面可以往更强的状态机、更强的自动校验上发展。如果 MCP 也补上，流程产品化就不只是&quot;文档阶段怎么走&quot;，还会升级成&quot;每个阶段对哪些外部系统有权操作、成功后如何自动推进下一步&quot;。</p>
-<p><strong>第三：做项目类型模板</strong>
-不同项目的 Harness 形态不同——WPF 工程、Unity 工程、后端服务、工具脚本仓库，需要的门禁和工作流不一样。可以沉淀出每类项目的<strong>&quot;最小可用 Harness 模板&quot;</strong>。</p>
-<p><strong>第四：知识沉淀进项目，而不是沉淀进人</strong></p>
-<blockquote>
-<p>真正专业的 Harness，不应该越来越像&quot;我和我的 AI 的默契&quot;，而应该越来越像&quot;任何一个人拿到这个工程，都能顺着这套系统做对事情&quot;。<strong>这才是工程化。</strong></p>
-</blockquote>
-<hr />
-<h2>第十二章：Harness 全貌——四块拼图</h2>
-<h3>四块拼图</h3>
-<p>| 拼图 | 对应章节 | 管什么 |
-|:---:|:-------:|:------:|
-| <strong>约束与流程</strong> | ③-⑦ | AI 按什么顺序、什么纪律推进 |
-| <strong>反馈</strong> | ⑧ | 做完以后能不能对结果有说法 |
-| <strong>知识库</strong> | ⑨ | 项目的&quot;从哪进门&quot;——索引优先 |
-| <strong>进化</strong> | ⑩-⑪ | 人退到哪一层，Harness 怎么继续变厚 |</p>
-<h3>四块怎么咬合</h3>
-<p><strong>第一块：约束与流程（三~七章）</strong>
-从 Rule、Skill 讲起，到多 Agent、流程定义文件和角色契约，再到第七章的撞墙补洞——这一条线都在回答：AI 在工程里按什么节奏、什么纪律推进。没有这一层，模型再强也只是在对话里聪明；有了这一层，复杂需求才能拆成<strong>可重复的接力</strong>。</p>
-<p><strong>第二块：反馈（第八章）</strong>
-约束告诉 AI &quot;应该怎样做&quot;，反馈回答的是&quot;这次做出来的算不算过关&quot;。反馈一旦接上，Harness 第一次具备<strong>结果感知能力</strong>——不是流程走完了就完事，而是对每次交付说话。</p>
-<p><strong>第三块：知识库（第九章）</strong>
-不是给 AI 一本读不完的百科全书，而是给一套够准的索引。流程规定什么时候该读地图、在错误的地方动手的概率降低；反馈则能在地图过期时用失败结果把维护压力打回来。</p>
-<p><strong>第四块：进化（第十~十一章）</strong>
-团队要对齐的东西落在&quot;仓库里能看见、能审计、能交接&quot;的资产上，人在 Harness 里定方向与闸门，AI 在规矩里高密度落地。</p>
-<h3>缺一块的症状</h3>
-<p>| 缺的拼图 | 典型症状 |
-|:-------:|:--------:|
-| 只有流程没有反馈 | 看起来很忙，不知道做对没有——完成幻觉 |
-| 只有反馈没有流程 | 闸机有了，上游仍是一团即兴 |
-| 没有知识库（索引） | 同类功能反复重写，同类坑反复踩 |
-| 没有进化 | 脚本与规则没人按新标准收紧，地图与真实结构脱节 |</p>
-<h3>最后收束</h3>
-<blockquote>
-<p>JK Launcher 这一路，并不是按&quot;理论四章&quot;一次性设计出来的，而是<strong>跑着跑着、补着补着，四块才逐渐齐全</strong>。你若在自己的工程里动手，大可以从四块里<strong>最缺的那一角下刀</strong>——不必和我同一顺序，但心里有这样一张总图，后面加 Skill、加脚本时，不容易加偏、也不容易加重复。</p>
-</blockquote>
-<hr />
-<h2>金句摘录</h2>
-<blockquote>
-<p>&quot;真正贵的不是 token，真正贵的是失控。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;Rule 不是没用，而是 Rule 只能做原则约束，不能做流程执行。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;完成不等于正确，推进不等于收口，做了事情不等于把事情做好了。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;人从执行者逐步上移成了系统设计者和最后责任人。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;AI 不是助手。AI 是一支执行力极强但必须被制度化管理的团队。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;成熟 Harness 最后一定会越来越依赖脚本，而不是越来越依赖提示词。&quot;</p>
-</blockquote>
-<blockquote>
-<p>&quot;好看，但难维护。&quot;（评价去中心化多 Agent）</p>
-</blockquote>
-<hr />
-<p><em>笔记整理时间：2026-05-28</em>
-<em>原文：腾讯云开发者公众号《从零搭建 Harness Engineering（以 JK Launcher 为案例）》</em>
-<em>全文共12章，此为详细版读书笔记</em></p>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="num">1</div>
+        <div class="label">篇笔记</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">37K</div>
+        <div class="label">累计字数</div>
+      </div>
+    </div>
+
+    <div class="note-list">
+      <a class="note-card" href="harness-notes.html">
+        <div class="title">📖 Harness Engineering 实战读书笔记</div>
+        <div class="desc">从零搭建 Harness Engineering 的完整工程实践记录，以 JK Launcher 为案例。共12章，涵盖 Rule、Skill、Sub Agent、Workflow、Scripts、MCP 六大概念及完整搭建路径。</div>
+        <div class="meta">
+          <span class="tag">AI工程</span>
+          <span class="tag green">2026-05-28</span>
+          <span>12章 · 37KB</span>
+        </div>
+      </a>
+    </div>
 
   </div>
-</article>
+</main>
 <footer>
   <div class="container">
-    <p>📖 Harness Engineering 实战读书笔记 · 基于腾讯云开发者公众号原文整理</p>
+    <p>📚 学习笔记合集 · 常读常新</p>
   </div>
 </footer>
 </body>
