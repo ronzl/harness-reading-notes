@@ -15,8 +15,8 @@
     --border: #e2e8f0;
     --quote-bg: #f1f5f9;
     --quote-border: #2563eb;
-    --code-bg: #1e293b;
-    --code-text: #e2e8f0;
+    --code-bg: #f1f5f9;
+    --code-text: #1e293b;
     --tag-bg: #e0e7ff;
     --tag-text: #4338ca;
   }
@@ -30,7 +30,6 @@
   }
   .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
   
-  /* Header */
   header {
     background: linear-gradient(135deg, #0f172a, #1e40af);
     color: white;
@@ -41,14 +40,11 @@
   header .subtitle { font-size: 1em; opacity: 0.8; line-height: 1.6; max-width: 560px; margin: 0 auto; }
   header .meta { margin-top: 18px; font-size: 0.82em; opacity: 0.55; }
 
-  /* Article */
   article { padding: 36px 0 60px; }
-  
   article h1 { font-size: 1.65em; margin: 1.6em 0 0.5em; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--text); }
   article h2 { font-size: 1.3em; margin: 1.5em 0 0.5em; color: var(--accent); }
   article h3 { font-size: 1.08em; margin: 1.2em 0 0.4em; }
   article p { margin: 0.7em 0; }
-  
   article blockquote {
     margin: 1em 0;
     padding: 14px 20px;
@@ -58,16 +54,15 @@
   }
   article blockquote p { margin: 0.3em 0; }
   article blockquote strong { color: var(--accent); }
-  
   article ul, article ol { margin: 0.5em 0 0.5em 1.6em; }
   article li { margin: 0.3em 0; }
-  
   article code {
     background: var(--accent-light);
     padding: 2px 7px;
     border-radius: 4px;
     font-size: 0.88em;
     font-family: "JetBrains Mono", "Fira Code", monospace;
+    color: var(--text);
   }
   article pre {
     background: var(--code-bg);
@@ -78,9 +73,8 @@
     margin: 1em 0;
     font-size: 0.85em;
     line-height: 1.6;
+    border: 1px solid var(--border);
   }
-  
-  /* Tables - critical fix */
   article table {
     width: 100%;
     border-collapse: collapse;
@@ -103,51 +97,13 @@
   }
   article table tr:nth-child(even) { background: #fafafa; }
   article table tr:hover { background: #f1f5f9; }
+  article hr { border: none; border-top: 2px solid var(--border); margin: 2em 0; }
   
-  article hr {
-    border: none;
-    border-top: 2px solid var(--border);
-    margin: 2em 0;
-  }
-  
-  /* Diagrams */
-  .diagram-container {
-    margin: 1.5em 0;
-    text-align: center;
-  }
-  .diagram-title {
-    font-size: 0.95em;
-    color: var(--muted);
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  .diagram-svg {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  }
-  .diagram-tip {
-    background: #fef3c7;
-    border: 1px solid #fcd34d;
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 0.9em;
-    text-align: left;
-  }
+  .diagram-container { margin: 1.5em 0; text-align: center; }
+  .diagram-title { font-size: 0.95em; color: var(--muted); margin-bottom: 8px; font-weight: 600; }
+  .diagram-svg { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .diagram-tip { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 12px 16px; font-size: 0.9em; text-align: left; }
 
-  /* Tag */
-  .tag {
-    display: inline-block;
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    padding: 2px 10px;
-    border-radius: 12px;
-    font-size: 0.78em;
-    margin: 2px;
-  }
-
-  /* Footer */
   footer {
     text-align: center;
     padding: 30px 0;
@@ -162,8 +118,7 @@
     header h1 { font-size: 1.4em; }
     article { padding: 20px 0 40px; }
     article table { font-size: 0.8em; }
-    article table th,
-    article table td { padding: 6px 8px; }
+    article table th, article table td { padding: 6px 8px; }
   }
 </style>
 </head>
@@ -326,12 +281,8 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 <p>当这些东西被做成脚本以后，AI 就很难再拿&quot;我觉得没问题&quot;来糊弄过去了。</p>
 </blockquote>
 <h3>1.7 概念串起来</h3>
-<p><strong>逐层叠加关系：</strong></p>
-<pre><code>Rule（底线） → Skill（标准化） → Scripts（硬验证）
-                 ↓
-           Sub Agent（分工）→ Workflow（接力）→ MCP（外接）
-</code></pre>
-<p><strong>另一种理解方式：</strong></p>
+<p><strong>逐层叠加关系：</strong>
+<strong>另一种理解方式：</strong></p>
 <ul>
 <li>Rule 负责告诉 AI 什么是底线</li>
 <li>Skill 负责把高频动作标准化</li>
