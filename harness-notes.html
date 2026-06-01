@@ -6,14 +6,14 @@
 <title>Harness Engineering 实战读书笔记</title>
 <style>
   :root {
-    --bg: #faf8f5;
+    --bg: #f8f9fa;
     --card: #ffffff;
-    --text: #2c2c2c;
-    --muted: #6b7280;
+    --text: #1e293b;
+    --muted: #64748b;
     --accent: #2563eb;
     --accent-light: #dbeafe;
-    --border: #e5e7eb;
-    --quote-bg: #f3f4f6;
+    --border: #e2e8f0;
+    --quote-bg: #f1f5f9;
     --quote-border: #2563eb;
     --code-bg: #1e293b;
     --code-text: #e2e8f0;
@@ -25,51 +25,51 @@
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.8;
+    line-height: 1.9;
     font-size: 16px;
   }
-  .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+  .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
   
   /* Header */
   header {
-    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    background: linear-gradient(135deg, #0f172a, #1e40af);
     color: white;
-    padding: 60px 0 50px;
+    padding: 56px 0 44px;
     text-align: center;
   }
-  header h1 { font-size: 2em; font-weight: 700; margin-bottom: 12px; letter-spacing: 1px; }
-  header .subtitle { font-size: 1.05em; opacity: 0.85; line-height: 1.6; max-width: 600px; margin: 0 auto; }
-  header .meta { margin-top: 20px; font-size: 0.85em; opacity: 0.65; }
+  header h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
+  header .subtitle { font-size: 1em; opacity: 0.8; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+  header .meta { margin-top: 18px; font-size: 0.82em; opacity: 0.55; }
 
   /* Article */
-  article { padding: 40px 0 60px; }
-  article > .container > h1,
-  article > .container > h2,
-  article > .container > h3 { margin-top: 1.8em; margin-bottom: 0.6em; line-height: 1.4; }
-  article > .container > h1 { font-size: 1.7em; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
-  article > .container > h2 { font-size: 1.35em; color: var(--accent); }
-  article > .container > h3 { font-size: 1.1em; }
-  article > .container > p { margin: 0.8em 0; }
-  article > .container > blockquote {
+  article { padding: 36px 0 60px; }
+  
+  article h1 { font-size: 1.65em; margin: 1.6em 0 0.5em; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--text); }
+  article h2 { font-size: 1.3em; margin: 1.5em 0 0.5em; color: var(--accent); }
+  article h3 { font-size: 1.08em; margin: 1.2em 0 0.4em; }
+  article p { margin: 0.7em 0; }
+  
+  article blockquote {
     margin: 1em 0;
-    padding: 14px 18px;
+    padding: 14px 20px;
     background: var(--quote-bg);
     border-left: 4px solid var(--quote-border);
     border-radius: 0 8px 8px 0;
-    font-style: normal;
   }
-  article > .container > blockquote p { margin: 0.3em 0; }
-  article > .container > blockquote strong { color: var(--accent); }
-  article > .container > ul, article > .container > ol { margin: 0.6em 0 0.6em 1.5em; }
-  article > .container > ul li, article > .container > ol li { margin: 0.3em 0; }
-  article > .container > code {
+  article blockquote p { margin: 0.3em 0; }
+  article blockquote strong { color: var(--accent); }
+  
+  article ul, article ol { margin: 0.5em 0 0.5em 1.6em; }
+  article li { margin: 0.3em 0; }
+  
+  article code {
     background: var(--accent-light);
-    padding: 2px 6px;
+    padding: 2px 7px;
     border-radius: 4px;
-    font-size: 0.9em;
+    font-size: 0.88em;
     font-family: "JetBrains Mono", "Fira Code", monospace;
   }
-  article > .container > pre {
+  article pre {
     background: var(--code-bg);
     color: var(--code-text);
     padding: 16px 20px;
@@ -79,30 +79,64 @@
     font-size: 0.85em;
     line-height: 1.6;
   }
-  article > .container > table {
+  
+  /* Tables - critical fix */
+  article table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 0.9em;
+    margin: 1.2em 0;
+    font-size: 0.88em;
+    display: block;
+    overflow-x: auto;
   }
-  article > .container > table th,
-  article > .container > table td {
+  article table th,
+  article table td {
     border: 1px solid var(--border);
     padding: 10px 14px;
     text-align: left;
+    vertical-align: top;
   }
-  article > .container > table th {
+  article table th {
     background: var(--accent-light);
     font-weight: 600;
+    white-space: nowrap;
   }
-  article > .container > table tr:nth-child(even) { background: #f9fafb; }
-  article > .container > hr {
+  article table tr:nth-child(even) { background: #fafafa; }
+  article table tr:hover { background: #f1f5f9; }
+  
+  article hr {
     border: none;
     border-top: 2px solid var(--border);
     margin: 2em 0;
   }
+  
+  /* Diagrams */
+  .diagram-container {
+    margin: 1.5em 0;
+    text-align: center;
+  }
+  .diagram-title {
+    font-size: 0.95em;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .diagram-svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .diagram-tip {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9em;
+    text-align: left;
+  }
 
-  /* Tags */
+  /* Tag */
   .tag {
     display: inline-block;
     background: var(--tag-bg);
@@ -118,14 +152,18 @@
     text-align: center;
     padding: 30px 0;
     color: var(--muted);
-    font-size: 0.85em;
+    font-size: 0.83em;
     border-top: 1px solid var(--border);
+    background: var(--card);
   }
 
   @media (max-width: 600px) {
-    header { padding: 40px 0 30px; }
-    header h1 { font-size: 1.5em; }
-    article { padding: 24px 0 40px; }
+    header { padding: 36px 0 28px; }
+    header h1 { font-size: 1.4em; }
+    article { padding: 20px 0 40px; }
+    article table { font-size: 0.8em; }
+    article table th,
+    article table td { padding: 6px 8px; }
   }
 </style>
 </head>
@@ -133,8 +171,8 @@
 <header>
   <div class="container">
     <h1>📖 Harness Engineering<br>实战读书笔记</h1>
-    <p class="subtitle">从零搭建 Harness Engineering 的完整工程实践记录——以 JK Launcher 为实战案例</p>
-    <p class="meta">原文：腾讯云开发者公众号 ｜ 整理时间：2026-05-28 ｜ 共12章</p>
+    <p class="subtitle">从零搭建 Harness Engineering 的完整工程实践记录<br>以 JK Launcher 为实战案例</p>
+    <p class="meta">原文：腾讯云开发者公众号 ｜ 整理：2026-05-28 ｜ 共12章</p>
   </div>
 </header>
 <article>
@@ -761,15 +799,44 @@ Skill 告诉 AI &quot;这件事具体应该怎么做&quot;</p>
 <h3>9.2 不是百科全书，是一套索引</h3>
 <p>作者特别强调：<strong>不是给 AI 一本读不完的百科全书，而是给一套够准的索引。</strong> 先告诉它该从哪几条线、哪几份文档进门，再让它自己去翻代码、对细节。</p>
 <p><strong>常见方案路网（多种思路）：</strong></p>
-<p>| 方案 | 特点 |
-|:---:|:----:|
-| 人工整理的导航文档（dev-map） | 按功能写&quot;该看哪、别碰哪&quot; |
-| 任务/需求总览（任务看板） | 一张表记当前做什么、到哪阶段 |
-| 工具自动吐出的地图 | 依赖图、模块清单、测试报告 |
-| 编辑器语言服务跳转 | 符号定义、引用查找 |
-| 检索进上下文 | 全文搜、向量检索 |
-| 仓库轻量约定 | README、CODEOWNERS |
-| 单独 Wiki | 需和仓库对齐 |</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">方案</th>
+  <th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">人工整理的导航文档（dev-map）</td>
+  <td style="text-align:center">按功能写&quot;该看哪、别碰哪&quot;</td>
+</tr>
+<tr>
+  <td style="text-align:center">任务/需求总览（任务看板）</td>
+  <td style="text-align:center">一张表记当前做什么、到哪阶段</td>
+</tr>
+<tr>
+  <td style="text-align:center">工具自动吐出的地图</td>
+  <td style="text-align:center">依赖图、模块清单、测试报告</td>
+</tr>
+<tr>
+  <td style="text-align:center">编辑器语言服务跳转</td>
+  <td style="text-align:center">符号定义、引用查找</td>
+</tr>
+<tr>
+  <td style="text-align:center">检索进上下文</td>
+  <td style="text-align:center">全文搜、向量检索</td>
+</tr>
+<tr>
+  <td style="text-align:center">仓库轻量约定</td>
+  <td style="text-align:center">README、CODEOWNERS</td>
+</tr>
+<tr>
+  <td style="text-align:center">单独 Wiki</td>
+  <td style="text-align:center">需和仓库对齐</td>
+</tr>
+</tbody>
+</table>
 <h3>9.3 具体落地：dev-map + 任务看板</h3>
 <p><strong>dev-map（开发导航地图）：</strong></p>
 <ul>
@@ -852,12 +919,37 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 <hr />
 <h2>第十二章：Harness 全貌——四块拼图</h2>
 <h3>四块拼图</h3>
-<p>| 拼图 | 对应章节 | 管什么 |
-|:---:|:-------:|:------:|
-| <strong>约束与流程</strong> | ③-⑦ | AI 按什么顺序、什么纪律推进 |
-| <strong>反馈</strong> | ⑧ | 做完以后能不能对结果有说法 |
-| <strong>知识库</strong> | ⑨ | 项目的&quot;从哪进门&quot;——索引优先 |
-| <strong>进化</strong> | ⑩-⑪ | 人退到哪一层，Harness 怎么继续变厚 |</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">拼图</th>
+  <th style="text-align:center">对应章节</th>
+  <th style="text-align:center">管什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center"><strong>约束与流程</strong></td>
+  <td style="text-align:center">③-⑦</td>
+  <td style="text-align:center">AI 按什么顺序、什么纪律推进</td>
+</tr>
+<tr>
+  <td style="text-align:center"><strong>反馈</strong></td>
+  <td style="text-align:center">⑧</td>
+  <td style="text-align:center">做完以后能不能对结果有说法</td>
+</tr>
+<tr>
+  <td style="text-align:center"><strong>知识库</strong></td>
+  <td style="text-align:center">⑨</td>
+  <td style="text-align:center">项目的&quot;从哪进门&quot;——索引优先</td>
+</tr>
+<tr>
+  <td style="text-align:center"><strong>进化</strong></td>
+  <td style="text-align:center">⑩-⑪</td>
+  <td style="text-align:center">人退到哪一层，Harness 怎么继续变厚</td>
+</tr>
+</tbody>
+</table>
 <h3>四块怎么咬合</h3>
 <p><strong>第一块：约束与流程（三~七章）</strong>
 从 Rule、Skill 讲起，到多 Agent、流程定义文件和角色契约，再到第七章的撞墙补洞——这一条线都在回答：AI 在工程里按什么节奏、什么纪律推进。没有这一层，模型再强也只是在对话里聪明；有了这一层，复杂需求才能拆成<strong>可重复的接力</strong>。</p>
@@ -868,12 +960,32 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 <p><strong>第四块：进化（第十~十一章）</strong>
 团队要对齐的东西落在&quot;仓库里能看见、能审计、能交接&quot;的资产上，人在 Harness 里定方向与闸门，AI 在规矩里高密度落地。</p>
 <h3>缺一块的症状</h3>
-<p>| 缺的拼图 | 典型症状 |
-|:-------:|:--------:|
-| 只有流程没有反馈 | 看起来很忙，不知道做对没有——完成幻觉 |
-| 只有反馈没有流程 | 闸机有了，上游仍是一团即兴 |
-| 没有知识库（索引） | 同类功能反复重写，同类坑反复踩 |
-| 没有进化 | 脚本与规则没人按新标准收紧，地图与真实结构脱节 |</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">缺的拼图</th>
+  <th style="text-align:center">典型症状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">只有流程没有反馈</td>
+  <td style="text-align:center">看起来很忙，不知道做对没有——完成幻觉</td>
+</tr>
+<tr>
+  <td style="text-align:center">只有反馈没有流程</td>
+  <td style="text-align:center">闸机有了，上游仍是一团即兴</td>
+</tr>
+<tr>
+  <td style="text-align:center">没有知识库（索引）</td>
+  <td style="text-align:center">同类功能反复重写，同类坑反复踩</td>
+</tr>
+<tr>
+  <td style="text-align:center">没有进化</td>
+  <td style="text-align:center">脚本与规则没人按新标准收紧，地图与真实结构脱节</td>
+</tr>
+</tbody>
+</table>
 <h3>最后收束</h3>
 <blockquote>
 <p>JK Launcher 这一路，并不是按&quot;理论四章&quot;一次性设计出来的，而是<strong>跑着跑着、补着补着，四块才逐渐齐全</strong>。你若在自己的工程里动手，大可以从四块里<strong>最缺的那一角下刀</strong>——不必和我同一顺序，但心里有这样一张总图，后面加 Skill、加脚本时，不容易加偏、也不容易加重复。</p>
@@ -910,7 +1022,8 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 </article>
 <footer>
   <div class="container">
-    <p>📖 Harness Engineering 实战读书笔记 · 基于腾讯云开发者公众号原文整理</p>
+    <p>📚 <a href="https://ronzl.github.io/harness-reading-notes/" style="color:var(--accent);text-decoration:none;">学习笔记合集</a> · Harness Engineering 实战读书笔记</p>
+    <p style="margin-top:6px;font-size:0.9em;opacity:0.7;">基于腾讯云开发者公众号原文整理 · 常读常新</p>
   </div>
 </footer>
 </body>
