@@ -584,6 +584,10 @@ PM 站在流程中心，天然知道所有阶段发生了什么。一旦有争�
 - 每个 Agent 对应的契约文件是不是齐全
 - 流程里提到的角色能不能在契约里找到
 
+**实际运行时 PM Agent 调度各子 Agent 的 Cursor 长截屏：**
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_06.png)
+
 ### 6-7章回顾：作者总结
 
 > 第五章到第七章连起来看，回答的是同一件事：
@@ -767,9 +771,9 @@ Workflow 已有流程定义文件和契约，后面可以往更强的状态机�
 
 ## 第十二章：Harness 全貌——四块拼图
 
-![](https://ronzl.github.io/harness-reading-notes/images/img_09.png)
-
 ### 四块拼图
+
+![](https://ronzl.github.io/harness-reading-notes/images/img_09.png)
 
 | 拼图 | 对应章节 | 管什么 |
 |:---:|:-------:|:------:|
