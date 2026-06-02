@@ -7,15 +7,7 @@
 
 ## 一、知识全景图（总览）
 
-```mermaid
-graph TD
-    H[Harness Engineering<br/>让AI在正确的轨道上高效生成] --> C1[运行时控制系统<br/>工具编排/状态持久化/错误恢复]
-    H --> C2[上下文工程<br/>Context Window优化/动态检索/防Context Rot]
-    H --> C3[工具集成与防护<br/>API标准化/预校验/安全护栏]
-    H --> C4[生命周期管理<br/>多步长任务/Checkpoint/Human-in-the-Loop]
-    
-    H --> EXT
-```
+![QQ音乐Harness知识全景图](images/qmusic-harness-knowledge-map.svg)
 
 **一句话概括**：Harness Engineering 不是又一个 AI 编码工具，而是一套工程治理层——在 Claude Code、Cursor、Cline 等执行工具之上，定义 AI Agent 在多服务大仓中必须遵守的规则和上下文。
 
