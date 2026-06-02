@@ -24,7 +24,6 @@
     line-height: 1.8;
   }
   .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-  
   header {
     background: linear-gradient(135deg, #1e3a5f, #2563eb);
     color: white;
@@ -33,9 +32,7 @@
   }
   header h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 10px; }
   header p { opacity: 0.8; font-size: 1.05em; }
-
   main { padding: 40px 0 60px; }
-
   .stats {
     display: flex;
     gap: 20px;
@@ -54,7 +51,7 @@
   }
   .stat-card .num { font-size: 2em; font-weight: 700; color: var(--accent); }
   .stat-card .label { font-size: 0.85em; color: var(--muted); margin-top: 4px; }
-
+  .category-title { font-size: 1.2em; font-weight: 600; color: var(--text); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
   .note-list { display: flex; flex-direction: column; gap: 16px; }
   .note-card {
     background: var(--card);
@@ -73,41 +70,12 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .note-card .title { font-size: 1.15em; font-weight: 600; color: var(--text); }
-  .note-card .desc { font-size: 0.9em; color: var(--muted); margin-top: 6px; }
-  .note-card .meta {
-    font-size: 0.8em;
-    color: var(--muted);
-    margin-top: 10px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .note-card .tag {
-    display: inline-block;
-    background: var(--accent-light);
-    color: var(--accent);
-    padding: 2px 10px;
-    border-radius: 10px;
-    font-size: 0.78em;
-  }
+  .note-card .desc { font-size: 0.9em; color: var(--muted); margin-top: 6px; line-height: 1.6; }
+  .note-card .meta { font-size: 0.8em; color: var(--muted); margin-top: 10px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .note-card .tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 2px 10px; border-radius: 10px; font-size: 0.78em; }
   .note-card .tag.green { background: var(--success-light); color: var(--success); }
-
-  .empty-state {
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--muted);
-  }
-  .empty-state .icon { font-size: 3em; margin-bottom: 16px; }
-
-  footer {
-    text-align: center;
-    padding: 30px 0;
-    color: var(--muted);
-    font-size: 0.85em;
-    border-top: 1px solid var(--border);
-  }
-
+  .note-card .tag.purple { background: #e9defa; color: #6741d9; }
+  footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.85em; border-top: 1px solid var(--border); }
   @media (max-width: 600px) {
     header { padding: 40px 0 30px; }
     header h1 { font-size: 1.6em; }
@@ -126,46 +94,69 @@
 
     <div class="stats">
       <div class="stat-card">
-        <div class="num">3</div>
+        <div class="num">5</div>
         <div class="label">篇笔记</div>
       </div>
       <div class="stat-card">
-        <div class="num">60K</div>
+        <div class="num">130K+</div>
         <div class="label">累计字数</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">2</div>
+        <div class="label">主题分类</div>
       </div>
     </div>
 
+    <div class="category-title">🛠️ 工具 · 工程实践</div>
     <div class="note-list">
+      <a class="note-card" href="engineering/agent-reading-notes.html">
+        <div class="title">🤖 Agent 从理论到实践 — 知识全景与深度笔记</div>
+        <div class="desc">基于97K字超级长文整理，从LLM原生缺陷出发，完整覆盖：记忆系统、RAG、Function Call/MCP、ReAct范式、Skill渐进加载、7种Multi-Agent模式、Harness六重保障，以及完整Python代码实践。</div>
+        <div class="meta">
+          <span class="tag">AI工程</span>
+          <span class="tag purple">理论+实践</span>
+          <span>16章 · 52KB</span>
+        </div>
+      </a>
+      <a class="note-card" href="engineering/harness-qqmusic-notes.html">
+        <div class="title">🎵 Harness Engineering 实战：QQ音乐在大仓多服务场景的AI协作</div>
+        <div class="desc">QQ音乐团队50+微服务Monorepo实践。核心公式：代码产出=AI能力×上下文质量。五阶段四门禁、三层知识体系、三仓联动、Skill-Agent-Command三件套、Self-Refinement自进化闭环。</div>
+        <div class="meta">
+          <span class="tag">AI工程</span>
+          <span class="tag green">实战案例</span>
+          <span>14章 · 27KB</span>
+        </div>
+      </a>
       <a class="note-card" href="engineering/harness-notes.html">
         <div class="title">📖 Harness Engineering 实战读书笔记</div>
         <div class="desc">从零搭建 Harness Engineering 的完整工程实践记录，以 JK Launcher 为案例。共12章，涵盖 Rule、Skill、Sub Agent、Workflow、Scripts、MCP 六大概念及完整搭建路径。</div>
         <div class="meta">
           <span class="tag">AI工程</span>
-          <span class="tag green">2026-05-28</span>
           <span>12章 · 37KB</span>
         </div>
       </a>
-          <a class="note-card" href="investment/huoyanjinjing-reading-notes.html">
+    </div>
+
+    <div class="category-title">📈 投资 · 财务</div>
+    <div class="note-list">
+      <a class="note-card" href="investment/fu-haitang-reading-notes.html" style="border-left-color: var(--success);">
+        <div class="title">🌾 一个农民的亿万传奇 — 读书笔记</div>
+        <div class="desc">傅海棠投资体系全景拆解。基于"天道"的周期交易框架：四大核心原则、六步操作系统、极端信号评分卡、经典战役复盘（2010棉花一战成名）。适合周期投资者和商品期货交易者。</div>
+        <div class="meta">
+          <span class="tag green">投资</span>
+          <span>8章 · 8KB</span>
+        </div>
+      </a>
+      <a class="note-card" href="investment/huoyanjinjing-reading-notes.html" style="border-left-color: var(--success);">
         <div class="title">📖 火眼金睛读财报 — 读书笔记</div>
         <div class="desc">基于张新民教授财报分析框架的实战读书笔记。覆盖三张表分析（利润表、资产负债表、现金流量表）、五大违法信号、30分钟读财报工作流及60+核心知识点。</div>
         <div class="meta">
-          <span class="tag">财务</span>
-          <span class="tag green">2026-06-01</span>
+          <span class="tag green">财务</span>
           <span>16KB</span>
         </div>
       </a>
     </div>
-    <div style="margin-top:16px;">
-      <a class="note-card" href="investment/fu-haitang-reading-notes.html">
-        <div class="title">🌾 一个农民的亿万传奇 — 读书笔记</div>
-        <div class="desc">傅海棠投资体系全景拆解。基于"天道"的周期交易框架：四大核心原则、六步操作系统、极端信号评分卡、经典战役复盘（2010棉花一战成名）。适合周期投资者和商品期货交易者。</div>
-        <div class="meta">
-          <span class="tag">投资</span>
-          <span class="tag green">2026-06-02</span>
-          <span>8章 · 8KB</span>
-        </div>
-      </a>
-    </div>
+
   </div>
 </main>
 <footer>
