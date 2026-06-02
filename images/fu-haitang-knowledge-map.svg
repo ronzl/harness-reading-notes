@@ -4,11 +4,11 @@
     <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
       <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
     </filter>
-    <marker id="arrow-down" markerWidth="10" markerHeight="8" refX="5" refY="8" orient="auto">
-      <polygon points="0,0 10,0 5,8" fill="#868e96"/>
+    <marker id="arrow-down" markerWidth="8" markerHeight="6" refX="8" refY="3" markerUnits="userSpaceOnUse" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#868e96"/>
     </marker>
-    <marker id="arrow-right" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
-      <polygon points="0,0 10,4 0,8" fill="#adb5bd"/>
+    <marker id="arrow-right" markerWidth="8" markerHeight="6" refX="8" refY="3" markerUnits="userSpaceOnUse" orient="auto">
+      <polygon points="0,0 8,3 0,6" fill="#adb5bd"/>
     </marker>
   </defs>
 
