@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle" font-size="32" font-weight="bold" font-family="sans-serif" fill="#1a1a2e">Harness Engineering 知识体系</text>
+  <text x="600" y="70" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#666">让AI在工程中稳定产出正确结果</text>
+
+  <!-- ============================================ -->
+  <!-- 核心目标 -->
+  <!-- ============================================ -->
+  <rect x="400" y="95" width="400" height="42" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="600" y="122" text-anchor="middle" font-size="18" font-weight="bold" font-family="sans-serif" fill="#2e7d32">核心目标：AI 工程化落地</text>
+
+  <!-- ============================================ -->
+  <!-- 第一部分：七大核心概念 -->
+  <!-- ============================================ -->
+  <rect x="50" y="155" width="1100" height="32" rx="6" fill="#1a1a2e"/>
+  <text x="600" y="177" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#fff">七大核心概念</text>
+
+  <!-- 概念卡片 3x2+1 -->
+  <!-- 行1 -->
+  <!-- Rule -->
+  <rect x="60" y="200" width="340" height="75" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="230" y="225" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#e65100">Rule（制度）</text>
+  <text x="230" y="248" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">告诉AI什么能做、什么不能做</text>
+  <text x="230" y="265" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">软约束，减少低级错误，但不强制执行</text>
+
+  <!-- Skill -->
+  <rect x="430" y="200" width="340" height="75" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="600" y="225" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#0d47a1">Skill（标准操作手册）</text>
+  <text x="600" y="248" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">固定流程→标准步骤，不必每次临场发挥</text>
+  <text x="600" y="265" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">Rule 管底线，Skill 管方法</text>
+
+  <!-- Scripts -->
+  <rect x="800" y="200" width="340" height="75" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="970" y="225" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#b71c1c">Scripts（硬验证）</text>
+  <text x="970" y="248" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">你说做完了没用，跑过我这关才算</text>
+  <text x="970" y="265" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">把能判定的约束从自然语言→可执行脚本</text>
+
+  <!-- 行2 -->
+  <!-- Sub Agent -->
+  <rect x="60" y="295" width="340" height="75" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="230" y="320" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#4a148c">Sub Agent（分工）</text>
+  <text x="230" y="343" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">复杂任务拆成多个专业角色</text>
+  <text x="230" y="360" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">需求/方案/开发/审查各司其职</text>
+
+  <!-- Workflow -->
+  <rect x="430" y="295" width="340" height="75" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="600" y="320" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#004d40">Workflow（接力赛规则）</text>
+  <text x="600" y="343" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">前进/暂停/打回/重跑都有明确依据</text>
+  <text x="600" y="360" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">PM按流程调度，不替专业角色做判断</text>
+
+  <!-- MCP -->
+  <rect x="800" y="295" width="340" height="75" rx="8" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+  <text x="970" y="320" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#e65100">MCP（外接接口）</text>
+  <text x="970" y="343" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">把AI接进更大工程系统的标准插座</text>
+  <text x="970" y="360" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#888">CI/CD/发布/监控/签名服务</text>
+
+  <!-- dev-map -->
+  <rect x="430" y="390" width="340" height="60" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
+  <text x="600" y="415" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#1a237e">dev-map + 任务看板（项目记忆）</text>
+  <text x="600" y="436" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">不是百科全书，是一套够准的索引</text>
+
+  <!-- 概念之间的关系 -->
+  <line x1="400" y1="237" x2="430" y2="237" stroke="#999" stroke-width="2"/>
+  <line x1="770" y1="237" x2="800" y2="237" stroke="#999" stroke-width="2"/>
+  <line x1="400" y1="332" x2="430" y2="332" stroke="#999" stroke-width="2"/>
+  <line x1="770" y1="332" x2="800" y2="332" stroke="#999" stroke-width="2"/>
+
+  <!-- 层级递进箭头 -->
+  <line x1="230" y1="275" x2="230" y2="295" stroke="#999" stroke-width="2"/>
+  <line x1="600" y1="275" x2="600" y2="295" stroke="#999" stroke-width="2"/>
+  <line x1="970" y1="275" x2="970" y2="295" stroke="#999" stroke-width="2"/>
+
+  <!-- ============================================ -->
+  <!-- 第二部分：多Agent接力流程 -->
+  <!-- ============================================ -->
+  <rect x="50" y="470" width="1100" height="32" rx="6" fill="#1a1a2e"/>
+  <text x="600" y="492" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#fff">七角色接力流程</text>
+
+  <!-- 7个Agent角色排成一行 -->
+  <!-- PM -->
+  <rect x="60" y="520" width="140" height="65" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="130" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#e65100">PM</text>
+  <text x="130" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">流程调度</text>
+  <text x="130" y="578" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#888">不替专业判断</text>
+
+  <line x1="200" y1="552" x2="215" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 需求分析 -->
+  <rect x="215" y="520" width="140" height="65" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="285" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#0d47a1">需求分析</text>
+  <text x="285" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">模糊想法→结构化</text>
+
+  <line x1="355" y1="552" x2="370" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 方案设计 -->
+  <rect x="370" y="520" width="140" height="65" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="440" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#004d40">方案设计</text>
+  <text x="440" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">需求→可落地技术方案</text>
+
+  <line x1="510" y1="552" x2="525" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 闸门 -->
+  <rect x="525" y="520" width="140" height="65" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="595" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#b71c1c">闸门总控</text>
+  <text x="595" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">可行性判断</text>
+  <text x="595" y="578" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#888">决定能否进开发</text>
+
+  <line x1="665" y1="552" x2="680" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 开发 -->
+  <rect x="680" y="520" width="140" height="65" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="750" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#1b5e20">开发实现</text>
+  <text x="750" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">按需求方案写代码</text>
+
+  <line x1="820" y1="552" x2="835" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 审查 -->
+  <rect x="835" y="520" width="140" height="65" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="905" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#4a148c">代码审查</text>
+  <text x="905" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">技术落地质量收口</text>
+
+  <line x1="975" y1="552" x2="990" y2="552" stroke="#999" stroke-width="3"/>
+
+  <!-- 测试 -->
+  <rect x="990" y="520" width="150" height="65" rx="6" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+  <text x="1065" y="545" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#e65100">测试验证</text>
+  <text x="1065" y="565" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">实际结果质量收口</text>
+
+  <!-- 回退箭头标注 -->
+  <rect x="525" y="600" width="140" height="28" rx="4" fill="#fce4ec" stroke="#ef5350" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="595" y="619" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#c62828">打回重跑/暂停</text>
+
+  <!-- ============================================ -->
+  <!-- 第三部分：四块拼图 -->
+  <!-- ============================================ -->
+  <rect x="50" y="650" width="1100" height="32" rx="6" fill="#1a1a2e"/>
+  <text x="600" y="672" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#fff">Harness Engineering 四块拼图</text>
+
+  <!-- 四块 -->
+  <rect x="60" y="698" width="250" height="70" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="185" y="722" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#e65100">约束与流程</text>
+  <text x="185" y="745" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#555">Rule → Skill → Workflow → Agent</text>
+
+  <rect x="340" y="698" width="250" height="70" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="465" y="722" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#0d47a1">反馈闭环</text>
+  <text x="465" y="745" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#555">Scripts → 基线对比 → 事后验证</text>
+
+  <rect x="620" y="698" width="250" height="70" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="745" y="722" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#004d40">知识索引</text>
+  <text x="745" y="745" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#555">dev-map + 任务看板</text>
+
+  <rect x="900" y="698" width="250" height="70" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="1025" y="722" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#4a148c">持续进化</text>
+  <text x="1025" y="745" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#555">知识沉淀进项目 → 模板化</text>
+
+  <!-- 四块之间连接 -->
+  <line x1="310" y1="733" x2="340" y2="733" stroke="#999" stroke-width="2"/>
+  <line x1="590" y1="733" x2="620" y2="733" stroke="#999" stroke-width="2"/>
+  <line x1="870" y1="733" x2="900" y2="733" stroke="#999" stroke-width="2"/>
+
+  <!-- ============================================ -->
+  <!-- 底部关键认知 -->
+  <!-- ============================================ -->
+  <rect x="150" y="790" width="900" height="38" rx="8" fill="#e8eaf6" stroke="#3f51b5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="600" y="815" text-anchor="middle" font-size="14" font-weight="bold" font-family="sans-serif" fill="#283593">核心认知：不是一次性设计到位，而是跑着跑着、补着补着，四块逐渐齐全</text>
+
+  <!-- 底线标注 -->
+  <rect x="60" y="790" width="70" height="38" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="95" y="814" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#b71c1c">缺一块的症状</text>
+  <text x="1070" y="814" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#888">缺流程=即兴 | 缺反馈=完成幻觉 | 缺索引=重复踩坑 | 缺进化=系统腐烂</text>
+</svg>
