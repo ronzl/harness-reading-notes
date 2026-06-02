@@ -7,7 +7,7 @@
 
 ## 一、知识全景图（总览）
 
-![QQ音乐Harness知识全景图](images/qmusic-harness-knowledge-map.svg)
+![QQ音乐Harness知识全景图](../images/qmusic-harness-knowledge-map.svg)
 
 **一句话概括**：Harness Engineering 不是又一个 AI 编码工具，而是一套工程治理层——在 Claude Code、Cursor、Cline 等执行工具之上，定义 AI Agent 在多服务大仓中必须遵守的规则和上下文。
 
@@ -324,14 +324,14 @@ graph TB
     L1 --> L1d[架构原则]
     end
     
-    subgraph 
+    subgraph 框架工程级
     L2[框架工程级 context/harness-framework/] --> L2a[INDEX.md 入口]
     L2 --> L2b[框架设计文档]
     L2 --> L2c[Skill/Agent/Command 目录]
     L2 --> L2d[占位符词典]
     end
     
-    subgraph 
+    subgraph 服务级
     L3[服务级 context/project/] --> L3a[INDEX.md 入口]
     L3 --> L3b[服务专属上下文]
     L3 --> L3c[API 文档]

@@ -1,6 +1,6 @@
 # Harness Engineering — AI 工程化落地读书笔记
 
-![Harness Engineering 知识体系](images/harness-knowledge-map.svg)
+![Harness Engineering 知识体系](../images/harness-knowledge-map.svg)
 
 > **一句话定义**：Harness Engineering 是一套让 AI 在工程环境中**稳定产出正确结果**的工程系统。不是提示词技巧，不是模型微调，是制度化地管住 AI 的执行质量。
 >

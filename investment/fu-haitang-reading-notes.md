@@ -7,7 +7,7 @@
 
 ## 知识全景图
 
-![知识全景图](images/fu-haitang-knowledge-map.svg)
+![知识全景图](../images/fu-haitang-knowledge-map.svg)
 
 > **全景图使用说明**：全书的三个层级从上到下——信仰层（世界观的根）、方法层（具体怎么操作）、工具层（用什么工具判断）。阅读时先理解信仰层，再进入方法层拆解，最后用工具层做实战落地。
 
@@ -200,7 +200,7 @@ graph LR
 
 ## 四、六步操作系统（标准化流程）
 
-![六步操作系统流程图](images/fu-haitang-six-steps.svg)
+![六步操作系统流程图](../images/fu-haitang-six-steps.svg)
 
 ### 仓位管理规则
 
