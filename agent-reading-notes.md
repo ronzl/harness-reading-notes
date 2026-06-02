@@ -44,6 +44,10 @@ graph TD
 
 ## 第 02 章 · 记忆系统
 
+> 原文配图：记忆体系分类（短期记忆 vs 长期记忆）
+
+![记忆体系分类](https://mmbiz.qpic.cn/mmbiz_jpg/kN3t5R6pdz42ypSswFudWKIDcHA1HuUs831BhHceVxefALNPOfdjHTtwhmoSZyucDmaGIicFygFXI6UA8iaT2tZy)
+
 ### 短期记忆（对话上下文）
 
 | 方案 | 原理 | 优势 | 劣势 |
@@ -66,6 +70,10 @@ graph TD
 ---
 
 ## 第 03 章 · RAG（检索增强生成）
+
+> 原文配图：RAG 整体流程
+
+![RAG 流程图](https://mmbiz.qpic.cn/sz_mmbiz_png/kN3t5R6pdz5wJSibOTDpv12eq9AqsAEEo3ugSY2HjpdZPSrYBGuDZVjJmq0tQBwPxawtSAx2xgYP3q2wXZD6K)
 
 ### 三大质量维度
 
@@ -96,6 +104,10 @@ graph TD
 
 ## 第 04 章 · Function Call & MCP
 
+> 原文配图：Function Call 与 MCP 架构
+
+![Function Call 示意图](https://mmbiz.qpic.cn/mmbiz_png/kN3t5R6pdz4IcUtPRnR6TaL1bvOODFHYxrBhIHfMTMbqHTX0y6LKsAVloVPW70cdCLZekxyBnnz2ibhGD5a1iaLy)
+
 ### 核心突破：从"说"到"做"
 - **Function Calling**：LLM 不仅能生成文本，还能调用外部工具/API
 - 模型输出结构化的工具调用参数 → 系统执行 → 返回结果给模型
@@ -108,6 +120,10 @@ graph TD
 ---
 
 ## 第 05 章 · Agent 的出现
+
+> 原文配图：ReAct 循环架构
+
+![ReAct 范式图](https://mmbiz.qpic.cn/sz_mmbiz_png/kN3t5R6pdz7FSibbKJtddhJZno0L0EJq0MDCB7eQpQ6YyyncEJCh2qR7HRqN2gV2RKHrN1Miar2alwlk6MUW5)
 
 ### ReAct 范式
 
@@ -134,6 +150,10 @@ graph LR
 
 ## 第 06 章 · Skill 的出现
 
+> 原文配图：Skill 系统架构
+
+![Skill 架构图](https://mmbiz.qpic.cn/mmbiz_png/kN3t5R6pdz5CBOiaibRicz5n9OOLmsEyOf7sH9OOkcs1g5EwwGqJ16jfpkmmLo4zJc8j4wbNI1PmRfGWEyOf07ia)
+
 ### 核心思路
 - **固化高频操作**：将频繁、固定、易错的操作序列打包为 Skill
 - Skill **不是 Tool**——Tool 是原子操作，Skill 是操作序列/工作流
@@ -145,6 +165,10 @@ graph LR
 ---
 
 ## 第 07 章 · Multi-Agent
+
+> 原文配图：Multi-Agent 协作架构
+
+![Multi-Agent 架构图](https://mmbiz.qpic.cn/mmbiz_png/kN3t5R6pdz7njTKAHVAnGL43O4OhJwgFhk3tUnc5jr0by97t3cNZsX6RXGyUp5iagCndugAwnLK7BWOqFiabLUGY)
 
 ### 三大设计原则
 1. **分解**：将复杂任务拆解为子任务
@@ -162,6 +186,10 @@ graph LR
 ---
 
 ## 第 08 章 · Harness
+
+> 原文配图：Harness 容错机制设计
+
+![Harness 架构图](https://mmbiz.qpic.cn/mmbiz_png/kN3t5R6pdz4ibichr5beTb8tMkvtpr42bXvMqer0Fiab4SEOdUpnsRuoPfHB5OEgmmNnb8Yd1icVqAM8dfYERaR8)
 
 ### 六重保障体系（核心）
 
@@ -183,6 +211,10 @@ graph LR
 
 ## 第 01 章 · 项目总览
 
+> 原文配图：整体架构设计
+
+![云端通用 Agent 架构](https://mmbiz.qpic.cn/sz_mmbiz_png/kN3t5R6pdz5IdVuXCxsxqZicRicZqHn9Se1ric4ezfaFtN9ianNicZpe0oL1fTcPZAnCb84c4wusiaX5ibCyG)
+
 ### 云端通用 Agent 架构
 - 目标是构建一个**通用的云端 Agent 系统**，可扩展、可运维
 - 架构分层清晰：核心 Loop → 记忆 → 工具 → SubAgent → Skill → Harness
@@ -190,6 +222,10 @@ graph LR
 ---
 
 ## 第 02 章 · 核心 Loop 设计
+
+> 原文配图：核心 Loop 完整生命周期
+
+![核心 Loop 设计图](https://mmbiz.qpic.cn/sz_mmbiz_png/kN3t5R6pdz6VRl3aOBey1OmQvIfkHanMic9NbYTTUhPNVmhr39Ma5XNMkIMa8NILuX0WZBkAzXJOIYe2iaZma)
 
 ### ReAct 主循环
 - 代码位置：`agent/loop.py`（约 200 行）
@@ -251,6 +287,10 @@ graph TD
 ## 第 04 章 · 工具模块
 
 ### 架构设计
+
+> 原文配图：工具模块分层架构
+
+![工具模块架构图](https://mmbiz.qpic.cn/mmbiz_png/kN3t5R6pdz514ibRXfjW7PA4uETJXOeibsibvVicLYmbc4X9NSqibFhY60E90HwUZ8mzQ2UndDQtaYFA570PVYOi)
 
 ```mermaid
 graph TD
