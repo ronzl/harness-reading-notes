@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" width="1400" height="950">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="950" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="700" y="42" text-anchor="middle" font-size="30" font-weight="bold" font-family="sans-serif" fill="#1a1a2e">QQ音乐 Harness Engineering 实战知识体系</text>
+  <text x="700" y="66" text-anchor="middle" font-size="15" font-family="sans-serif" fill="#666">在大仓多服务场景下让AI Agent可控、可预测、可复用</text>
+
+  <!-- ============================================ -->
+  <!-- 核心命题 -->
+  <!-- ============================================ -->
+  <rect x="350" y="90" width="700" height="42" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="117" text-anchor="middle" font-size="18" font-weight="bold" font-family="sans-serif" fill="#2e7d32">核心公式：代码产出 = AI能力 × 上下文质量</text>
+
+  <!-- Arrows from core to three layers -->
+  <line x1="400" y1="132" x2="230" y2="170" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="132" x2="700" y2="170" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="132" x2="1170" y2="170" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- 第一层：三大基石 -->
+  <!-- ============================================ -->
+  <rect x="50" y="175" width="1300" height="30" rx="6" fill="#1a1a2e"/>
+  <text x="700" y="195" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#fff">三大基石</text>
+
+  <!-- 基石1: Vibe Coding缺陷 -->
+  <rect x="60" y="215" width="400" height="100" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="260" y="240" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#e65100">Vibe Coding 三大缺陷</text>
+  <text x="260" y="265" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">信息损耗 — 隐性规范/历史决策丢失</text>
+  <text x="260" y="285" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">知识孤岛 — 不同服务互不知晓</text>
+  <text x="260" y="305" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">验证断档 — 生成快于验证，错误累积</text>
+
+  <!-- 基石2: 上下文缺口 -->
+  <rect x="500" y="215" width="400" height="100" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="700" y="240" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#0d47a1">五大上下文缺口</text>
+  <text x="700" y="265" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">隐性规范 | 历史决策 | 服务契约</text>
+  <text x="700" y="285" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">跨服务依赖 | 演进轨迹</text>
+  <text x="700" y="305" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">上下文质量趋近0时，再强模型也无效</text>
+
+  <!-- 基石3: Harness定义 -->
+  <rect x="940" y="215" width="400" height="100" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="1140" y="240" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#b71c1c">Harness Engineering</text>
+  <text x="1140" y="265" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">在Agent之上加工程治理层</text>
+  <text x="1140" y="285" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">先约束再生成，先验证再合并</text>
+  <text x="1140" y="305" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">Team Agent Governance = MAxMSxML</text>
+
+  <!-- Vertical arrows to layer 2 -->
+  <line x1="260" y1="315" x2="260" y2="365" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="315" x2="700" y2="365" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1140" y1="315" x2="1140" y2="365" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- 第二层：工程框架（三层分栏） -->
+  <!-- ============================================ -->
+  <rect x="50" y="370" width="1300" height="30" rx="6" fill="#1a1a2e"/>
+  <text x="700" y="390" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#fff">工程框架</text>
+
+  <!-- 三仓联动 -->
+  <rect x="60" y="412" width="335" height="160" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="227" y="440" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#4a148c">三仓联动（脑手脚）</text>
+  <line x1="80" y1="450" x2="375" y2="450" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="227" y="475" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">Harness仓（脑）</text>
+  <text x="227" y="495" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">定义的规范化流程沉淀</text>
+  <text x="227" y="518" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">业务仓（手脚）</text>
+  <text x="227" y="538" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">Agent识别知识并执行技能</text>
+  <text x="227" y="558" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">IDL仓（神经）</text>
+  <text x="227" y="578" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">接口契约统一管理，强制版本约束</text>
+
+  <!-- 四库全书 -->
+  <rect x="420" y="412" width="335" height="160" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="587" y="440" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#004d40">四库全书（知识底座）</text>
+  <line x1="440" y1="450" x2="735" y2="450" stroke="#00695c" stroke-width="1"/>
+  <text x="587" y="475" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">规则库 — 编码规范/架构红线</text>
+  <text x="587" y="498" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">Skill库 — 标准操作手册</text>
+  <text x="587" y="521" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">模版库 — 文档/代码模板</text>
+  <text x="587" y="544" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">评测库 — 场景+Case验证</text>
+  <text x="587" y="570" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">三层知识体系：团队→框架工程→服务</text>
+
+  <!-- 五阶段+四门禁 -->
+  <rect x="780" y="412" width="560" height="160" rx="8" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+  <text x="1060" y="440" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#e65100">五阶段开发流程 + 四道门禁</text>
+  <line x1="800" y1="450" x2="1320" y2="450" stroke="#f57f17" stroke-width="1"/>
+
+  <!-- 五阶段 -->
+  <rect x="795" y="458" width="100" height="34" rx="5" fill="#fff3bf" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="845" y="479" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e65100">需求阶段</text>
+  <text x="900" y="479" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#666">→</text>
+
+  <rect x="910" y="458" width="100" height="34" rx="5" fill="#fff3bf" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="960" y="479" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e65100">设计阶段</text>
+  <text x="1015" y="479" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#666">→</text>
+
+  <rect x="1025" y="458" width="100" height="34" rx="5" fill="#fff3bf" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="1075" y="479" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e65100">开发阶段</text>
+  <text x="1130" y="479" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#666">→</text>
+
+  <rect x="1140" y="458" width="100" height="34" rx="5" fill="#fff3bf" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="1190" y="479" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e65100">审查阶段</text>
+  <text x="1245" y="479" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#666">→</text>
+
+  <rect x="1255" y="458" width="70" height="34" rx="5" fill="#fff3bf" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="1290" y="479" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e65100">交付</text>
+
+  <!-- 四门禁 -->
+  <text x="1060" y="514" text-anchor="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#555">四门禁：错误死在最便宜的地方</text>
+  <rect x="810" y="522" width="225" height="42" rx="5" fill="#ffc9c9" stroke="#e03131" stroke-width="1.5"/>
+  <text x="922" y="542" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#c92a2a">① 检查门（立即阻断）</text>
+  <text x="922" y="557" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#c92a2a">格式/类型/超时 -> 当场拦截</text>
+
+  <rect x="1060" y="522" width="225" height="42" rx="5" fill="#ffd8a8" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="1172" y="542" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#c92a2a">② 评测门（离线验证）</text>
+  <text x="1172" y="557" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#c92a2a">语义/逻辑/场景测试</text>
+
+  <rect x="810" y="570" width="225" height="42" rx="5" fill="#ffd8a8" stroke="#e8590c" stroke-width="1.5"/>
+  <text x="922" y="590" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#c92a2a">③ 人工审查（Human-in-Loop）</text>
+  <text x="922" y="605" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#c92a2a">超2个门约束的变更必须人工</text>
+
+  <rect x="1060" y="570" width="225" height="42" rx="5" fill="#ffc9c9" stroke="#e03131" stroke-width="1.5"/>
+  <text x="1172" y="590" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#c92a2a">④ 验收闭环（终局验证）</text>
+  <text x="1172" y="605" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#c92a2a">需求满足度/回归确认</text>
+
+  <!-- Vertical arrows to layer 3 -->
+  <line x1="227" y1="572" x2="227" y2="645" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="587" y1="572" x2="587" y2="645" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1060" y1="620" x2="1060" y2="645" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- 第三层：落地产品 -->
+  <!-- ============================================ -->
+  <rect x="50" y="650" width="1300" height="30" rx="6" fill="#1a1a2e"/>
+  <text x="700" y="670" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#fff">落地产品</text>
+
+  <!-- 34 Skill -->
+  <rect x="60" y="692" width="300" height="75" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="210" y="718" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#0d47a1">34 个 Skill</text>
+  <text x="210" y="742" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">标准操作手册</text>
+  <text x="210" y="760" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">原子技能：基础/日志/规范等</text>
+
+  <!-- 24 Agent -->
+  <rect x="390" y="692" width="300" height="75" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="540" y="718" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#4a148c">24 个 Agent</text>
+  <text x="540" y="742" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">跨服务编排 Agent</text>
+  <text x="540" y="760" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">审查8维度独立Agent并行执行</text>
+
+  <!-- 35 Command -->
+  <rect x="720" y="692" width="300" height="75" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="870" y="718" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#004d40">35 个 Command</text>
+  <text x="870" y="742" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">AI友好入口</text>
+  <text x="870" y="760" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">每个Command对接一个Service</text>
+
+  <!-- Self-Refinement -->
+  <rect x="1050" y="692" width="290" height="75" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="1195" y="718" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#b71c1c">Self-Refinement</text>
+  <text x="1195" y="742" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">AI犯错 → 沉淀纠正史</text>
+  <text x="1195" y="760" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#777">下次自动规避同类错误</text>
+
+  <!-- Arrows between products -->
+  <line x1="360" y1="730" x2="383" y2="730" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="730" x2="713" y2="730" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1020" y1="730" x2="1043" y2="730" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- 底部核心理念 -->
+  <!-- ============================================ -->
+  <rect x="200" y="800" width="1000" height="50" rx="10" fill="#d0bfff" stroke="#845ef7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="825" text-anchor="middle" font-size="16" font-weight="bold" font-family="sans-serif" fill="#6741d9">核心理念：AI能力 x 上下文质量 — 上下文质量是团队自己的可控杠杆</text>
+  <text x="700" y="843" text-anchor="middle" font-size="13" font-family="sans-serif" fill="#555">错误鉴定原则：错误死在最便宜的地方 | 检查门阻断 &gt; 评测门验证 &gt; 人工介入</text>
+
+  <!-- Bottom metadata -->
+  <text x="700" y="890" text-anchor="middle" font-size="12" font-family="sans-serif" fill="#999">来源：腾讯云开发者公众号 · QQ音乐（腾讯音乐）团队 | 50+ 微服务 · Monorepo + 多仓协同场景</text>
+
+</svg>
