@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="sans-serif">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#868e96"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="900" fill="#f8f9fa" rx="8"/>
+
+  <rect x="0" y="0" width="1200" height="48" fill="#1a1a2e" rx="8"/>
+  <rect x="0" y="24" width="1200" height="24" fill="#1a1a2e"/>
+  <text x="600" y="30" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Agent 从理论到实践 -- 知识全景图</text>
+
+  <!-- ============================================ -->
+  <!-- L1: 理论基石 -->
+  <!-- ============================================ -->
+  <rect x="30" y="64" width="1140" height="185" rx="10" fill="#f3f0ff" stroke="#d0bfff" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="30" y="64" width="140" height="28" rx="6" fill="#6741d9"/>
+  <text x="100" y="83" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">L1 理论基石</text>
+
+  <!-- LLM -->
+  <rect x="50" y="105" width="230" height="65" rx="6" fill="#fff" stroke="#d0bfff" stroke-width="1.5"/>
+  <text x="165" y="127" text-anchor="middle" fill="#6741d9" font-size="13" font-weight="bold">LLM 万能百科全书</text>
+  <text x="165" y="147" text-anchor="middle" fill="#868e96" font-size="11">缺陷一: 无记忆</text>
+  <text x="165" y="163" text-anchor="middle" fill="#868e96" font-size="11">缺陷二: 知识静态</text>
+
+  <line x1="285" y1="137" x2="315" y2="137" stroke="#868e96" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 记忆 -->
+  <rect x="320" y="105" width="230" height="65" rx="6" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1.5"/>
+  <text x="435" y="127" text-anchor="middle" fill="#1864ab" font-size="13" font-weight="bold">记忆系统</text>
+  <text x="435" y="147" text-anchor="middle" fill="#495057" font-size="11">短期: 滑动窗口/摘要/分层</text>
+  <text x="435" y="163" text-anchor="middle" fill="#868e96" font-size="11">长期: 持久化/语义检索/衰减</text>
+
+  <line x1="555" y1="137" x2="585" y2="137" stroke="#868e96" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- RAG -->
+  <rect x="590" y="105" width="250" height="65" rx="6" fill="#ebfbee" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="715" y="127" text-anchor="middle" fill="#2b8a3e" font-size="13" font-weight="bold">RAG 检索增强生成</text>
+  <text x="715" y="147" text-anchor="middle" fill="#495057" font-size="11">索引质量 / 检索质量 / 生成质量</text>
+  <text x="715" y="163" text-anchor="middle" fill="#868e96" font-size="11">问题: 无反馈闭环 / 更新不足</text>
+
+  <line x1="845" y1="137" x2="875" y2="137" stroke="#868e96" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Function Call -->
+  <rect x="880" y="105" width="270" height="65" rx="6" fill="#fff3e0" stroke="#ffe0b2" stroke-width="1.5"/>
+  <text x="1015" y="127" text-anchor="middle" fill="#e65100" font-size="13" font-weight="bold">Function Call / MCP</text>
+  <text x="1015" y="147" text-anchor="middle" fill="#495057" font-size="11">从"说"到"做"的关键跨越</text>
+  <text x="1015" y="163" text-anchor="middle" fill="#868e96" font-size="11">MCP: 标准化工具协议</text>
+
+  <!-- 驱动力标注 -->
+  <rect x="50" y="185" width="1100" height="28" rx="14" fill="#f3f0ff" stroke="#d0bfff" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="600" y="204" text-anchor="middle" fill="#6741d9" font-size="11" font-weight="bold">驱动力: LLM 缺陷 → 催生记忆/RAG/Function Call —— 解决"不会记、不会新、不会做"</text>
+
+  <line x1="600" y1="249" x2="600" y2="278" stroke="#868e96" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- L2: 核心机制 -->
+  <!-- ============================================ -->
+  <rect x="30" y="288" width="1140" height="260" rx="10" fill="#e7f5ff" stroke="#a5d8ff" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="30" y="288" width="140" height="28" rx="6" fill="#1864ab"/>
+  <text x="100" y="307" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">L2 核心机制</text>
+
+  <!-- Agent ReAct -->
+  <rect x="50" y="330" width="310" height="85" rx="6" fill="#fff" stroke="#a5d8ff" stroke-width="1.5"/>
+  <text x="205" y="353" text-anchor="middle" fill="#1864ab" font-size="14" font-weight="bold">Agent - ReAct 范式</text>
+  <text x="205" y="375" text-anchor="middle" fill="#495057" font-size="11">Thought(推理)→Action(行动)→Observation(观察)</text>
+  <rect x="60" y="388" width="290" height="20" rx="4" fill="#fff5f5"/>
+  <text x="205" y="403" text-anchor="middle" fill="#c92a2a" font-size="10">问题: 工具膨胀/无法规划/单点故障/难收敛</text>
+
+  <!-- Skill -->
+  <rect x="390" y="330" width="230" height="85" rx="6" fill="#ebfbee" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="505" y="353" text-anchor="middle" fill="#2b8a3e" font-size="14" font-weight="bold">Skill 固化</text>
+  <text x="505" y="375" text-anchor="middle" fill="#495057" font-size="11">高频/固定/易错操作 → 打包复用</text>
+  <rect x="400" y="388" width="210" height="20" rx="4" fill="#fff3bf"/>
+  <text x="505" y="403" text-anchor="middle" fill="#e67700" font-size="10">渐进式加载，解决上下文膨胀</text>
+
+  <line x1="365" y1="372" x2="385" y2="372" stroke="#868e96" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Multi-Agent -->
+  <rect x="650" y="330" width="230" height="85" rx="6" fill="#fce4ec" stroke="#ffcdd2" stroke-width="1.5"/>
+  <text x="765" y="353" text-anchor="middle" fill="#c62828" font-size="14" font-weight="bold">Multi-Agent</text>
+  <text x="765" y="375" text-anchor="middle" fill="#495057" font-size="11">分解 + 隔离 + 并行</text>
+  <rect x="660" y="388" width="210" height="20" rx="4" fill="#fff3bf"/>
+  <text x="765" y="403" text-anchor="middle" fill="#e67700" font-size="10">复杂任务拆成子任务并行执行</text>
+
+  <line x1="625" y1="372" x2="645" y2="372" stroke="#868e96" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Harness -->
+  <rect x="910" y="330" width="240" height="85" rx="6" fill="#fff3e0" stroke="#ffe0b2" stroke-width="1.5"/>
+  <text x="1030" y="353" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">Harness 六重保障</text>
+  <rect x="920" y="365" width="220" height="43" rx="4" fill="#fff8e1"/>
+  <text x="1030" y="383" text-anchor="middle" fill="#e65100" font-size="10" font-weight="bold">①预算 ②中断 ③压缩 ④重试 ⑤空防护 ⑥修复</text>
+  <text x="1030" y="401" text-anchor="middle" fill="#868e96" font-size="10">让 Agent 从"偶尔好用"到"稳定可用"</text>
+
+  <line x1="885" y1="372" x2="905" y2="372" stroke="#868e96" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Architecture bottom bar -->
+  <rect x="50" y="430" width="1100" height="46" rx="6" fill="#fff" stroke="#a5d8ff" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="600" y="450" text-anchor="middle" fill="#1864ab" font-size="12" font-weight="bold">Agent 核心 Loop 生命周期</text>
+  <text x="600" y="468" text-anchor="middle" fill="#495057" font-size="11">Memory注入 → Context构建 → THINK(LLM推理) → ACT(工具调用) → OBSERVE(观察) → Harness保障 → 循环/结束</text>
+
+  <!-- Arrow: how ReAct feeds into Plan -->
+  <rect x="350" y="430" width="80" height="20" rx="4" fill="#fff3bf"/>
+  <text x="390" y="444" text-anchor="middle" fill="#e67700" font-size="9" font-weight="bold">+Plan 能力</text>
+
+  <line x1="600" y1="548" x2="600" y2="578" stroke="#868e96" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ============================================ -->
+  <!-- L3: 工程实践 -->
+  <!-- ============================================ -->
+  <rect x="30" y="588" width="1140" height="285" rx="10" fill="#ebfbee" stroke="#b2f2bb" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="30" y="588" width="140" height="28" rx="6" fill="#2b8a3e"/>
+  <text x="100" y="607" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">L3 工程实践</text>
+
+  <!-- Core Loop -->
+  <rect x="50" y="630" width="250" height="100" rx="6" fill="#fff" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="175" y="653" text-anchor="middle" fill="#2b8a3e" font-size="13" font-weight="bold">核心 Loop</text>
+  <text x="60" y="675" fill="#495057" font-size="11">• agent/loop.py (~200行)</text>
+  <text x="60" y="695" fill="#495057" font-size="11">• ReAct 主循环 + Harness</text>
+  <text x="60" y="715" fill="#495057" font-size="11">• 六重保障机制</text>
+
+  <!-- Memory Module -->
+  <rect x="330" y="630" width="250" height="100" rx="6" fill="#fff" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="455" y="653" text-anchor="middle" fill="#2b8a3e" font-size="13" font-weight="bold">记忆模块</text>
+  <text x="340" y="675" fill="#495057" font-size="11">• Memory 类 (短期+长期)</text>
+  <text x="340" y="695" fill="#495057" font-size="11">• 滑动窗口/自动摘要</text>
+  <text x="340" y="715" fill="#495057" font-size="11">• 持久化(JSON+向量化)</text>
+
+  <!-- Tool Module -->
+  <rect x="610" y="630" width="250" height="100" rx="6" fill="#fff" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="735" y="653" text-anchor="middle" fill="#2b8a3e" font-size="13" font-weight="bold">工具模块</text>
+  <text x="620" y="675" fill="#495057" font-size="11">• Tool 基类 + 注册/发现</text>
+  <text x="620" y="695" fill="#495057" font-size="11">• MCP 适配器</text>
+  <text x="620" y="715" fill="#495057" font-size="11">• 动态按需加载</text>
+
+  <!-- SubAgent -->
+  <rect x="890" y="630" width="260" height="100" rx="6" fill="#fff" stroke="#b2f2bb" stroke-width="1.5"/>
+  <text x="1020" y="653" text-anchor="middle" fill="#2b8a3e" font-size="13" font-weight="bold">SubAgent / Plan / Skill</text>
+  <text x="900" y="675" fill="#495057" font-size="11">• SubAgent: name+goal+tools+rules</text>
+  <text x="900" y="695" fill="#495057" font-size="11">• Plan: 简单→ReAct, 复杂→先规划</text>
+  <text x="900" y="715" fill="#495057" font-size="11">• Skill: name+description+tools+workflow</text>
+
+  <!-- Architecture design philosophy -->
+  <rect x="50" y="748" width="1100" height="48" rx="8" fill="#fff" stroke="#b2f2bb" stroke-width="1"/>
+  <text x="600" y="770" text-anchor="middle" fill="#2b8a3e" font-size="12" font-weight="bold">四大设计哲学</text>
+  <rect x="60" y="780" width="255" height="12" rx="4" fill="#fff3bf"/>
+  <text x="187" y="790" text-anchor="middle" fill="#e67700" font-size="9">渐进式: 从简单到复杂，按需加载</text>
+  <rect x="330" y="780" width="255" height="12" rx="4" fill="#fff3bf"/>
+  <text x="457" y="790" text-anchor="middle" fill="#e67700" font-size="9">解耦隔离: 各模块各司其职</text>
+  <rect x="600" y="780" width="255" height="12" rx="4" fill="#fff3bf"/>
+  <text x="727" y="790" text-anchor="middle" fill="#e67700" font-size="9">可恢复性: Harness 自动恢复</text>
+  <rect x="870" y="780" width="255" height="12" rx="4" fill="#fff3bf"/>
+  <text x="997" y="790" text-anchor="middle" fill="#e67700" font-size="9">上下文优先: 控制膨胀是核心动机</text>
+
+  <!-- Bottom label -->
+  <rect x="180" y="812" width="840" height="28" rx="14" fill="#fff3e0" stroke="#ffe0b2" stroke-width="1.5"/>
+  <text x="600" y="831" text-anchor="middle" fill="#e65100" font-size="12" font-weight="bold">核心认知: Agent 的本质是连接 — 连接 LLM 的推理能力与外部世界的工具/知识/记忆</text>
+
+  <rect x="50" y="812" width="110" height="28" rx="4" fill="#fff5f5" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="105" y="831" text-anchor="middle" fill="#c62828" font-size="10" font-weight="bold">知识来源: 微信文章</text>
+</svg>
